@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/*
 input, select, textarea { 
   margin: 1px 1px 1px 1px;
 }
@@ -12,15 +13,16 @@ code {
 pre { 
   padding: 20px 10px 20px 10px; background-color: #EFEFEF;
 }
-/* body {
+body {
   margin-top: 20px;
   text-align: center;
   background: #ffffff;
   color: #000000;
-} */
+}
+*/
 .align-center { 
-  max-width: 60%;
-  text-align: left;
+  max-width: 95%;
+  /* text-align: left; */
   margin: 30px auto;
 }
 .result {
