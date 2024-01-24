@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>CSS: Floating Label</title>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="/image/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- <link rel="stylesheet" href="/css/normalize.css"/>
+<link rel="stylesheet" href="/css/letters.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/lib/prism/prism.css" />
+<script src="/lib/prism/prism.js"></script>
+<script type="module" src="/js/fire-when-ready.js"></script> -->
+<style>
+.label-before, .field input:focus + label::before, .field input:valid + label::before {
+  line-height: 20px;
+  font-size: 12px;
+  top: -10px;
+  background: #fff;
+  padding: 0 6px;
+  left: 9px;
+}
+
+.container {
+  width: 80%;
+  margin: 30px 10%;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 15px;
+}
+.field label::before {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 15px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #777;
+  transition: 300ms all;
+}
+.field input {
+  width: 100%;
+  line-height: 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.field input:focus {
+  outline: 0;
+  border-color: blue;
+}
+.field input:valid + label::before {
+  content: attr(data-title);
+}
+.field input:focus + label::before {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Floating Label</h2>
+
+  <div class="field">
+    <input type="text" required autocomplete="off" id="username" value="fixalot@example.com">
+    <label for="username" title="로그인 이메일을 입력하세요" data-title="로그인 이메일"></label>
+  </div>
+
+  <div class="field">
+    <input type="password" required autocomplete="off" id="password">
+    <label for="password" title="비밀번호를 입력하세요" data-title="비밀번호"></label>
+  </div>
+  
+  <br>
+  <p>소스 출처: <a href="https://codepen.io/tayfunerbilen/pen/qMKxeQ" target="_blank">https://codepen.io/tayfunerbilen/pen/qMKxeQ</a></p>
+</div>
+
+</body>
+</html>
