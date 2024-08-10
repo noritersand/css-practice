@@ -1,50 +1,117 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<title>CSS: overflow</title>
-<meta charset="utf-8">
-<link rel="icon" type="image/png" href="/image/favicon.png">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="stylesheet" href="/css/normalize.css"/>
-<link rel="stylesheet" href="/css/letters.css"/>
-<!-- <link rel="stylesheet" href="/css/style.css"/> -->
-</head>
-<body>
-<div class="align-center">
-  <h1>CSS: overflow(scroll)</h1>
-  <p>뿅뿅</p>
-  <h4>도움말</h4>
-  <ul>
-    <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/overflow">https://developer.mozilla.org/ko/docs/Web/CSS/overflow</a></li>
-  </ul>
-  <p>부모 요소보다 큰 콘텐츠를 어떻게 처리할 지 지정하는 속성. 세부 속성으로 `overflow-x`와 `overflow-y`가 있다.</p>
-  <h4>overflow: visible</h4>
-  <p>넘치는 콘텐츠를 그대로 노출한다. 콘텐츠의 </p>
-  <div style="overflow: visible; background-color: #dfd6d6; height: 150px; width: 250px; margin: 0 0 20px 0;">
-    <div style="background-color: red; opacity: 0.3; height: 200px; margin: 10px;">
-    </div>
-  </div>
-  <h4 style="margin-top: 80px;">overflow: hidden</h4>
-  <p>넘치는 영역은 부모 요소에 맞춰 잘라낸다</p>
-  <div style="overflow: hidden; background-color: #dfd6d6; height: 150px; width: 250px; margin: 0 0 20px 0;">
-    <div style="background-color: red; opacity: 0.3; height: 200px; margin: 10px;">
-    </div>
-  </div>
-  <h4>overflow: scroll</h4>
-  <p>콘텐츠를 자르되 나머지를 볼 수 있도록 스크롤을 생성한다.</p>
-  <div style="overflow: scroll; background-color: #dfd6d6; height: 150px; width: 250px; margin: 0 0 20px 0;">
-    <div style="background-color: red; opacity: 0.3; height: 200px; margin: 10px;">
-    </div>
-  </div>
-  <h4>overflow: auto</h4>
-  <p>사용자 에이전트(웹에선 브라우저)가 결정하게 한다.</p>
-  <div style="overflow: auto; background-color: #dfd6d6; height: 150px; width: 250px; margin: 0 0 20px 0;">
-    <div style="background-color: red; opacity: 0.3; height: 200px; margin: 10px;">
-    </div>
-  </div>
+  <head>
+    <title>CSS Properties: overflow</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/image/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/letters.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/lib/prism/prism.css" />
+    <script src="/lib/prism/prism.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
 
-  <div class="description">
-  </div>
-</div>
-</body>
+    <main class="align-center">
+      <article>
+        <h1>CSS Properties: overflow</h1>
+        <p>
+          부모 요소보다 큰 콘텐츠를 어떻게 처리할 지 지정하는 속성. 세부
+          속성으로
+          <code class="language-js">overflow-x</code>와
+          <code class="language-js">overflow-y</code>가 있다.
+        </p>
+        <h4>overflow: visible</h4>
+        <p>넘치는 콘텐츠를 그대로 노출한다.</p>
+        <div
+          style="
+            overflow: visible;
+            background-color: #dfd6d6;
+            height: 150px;
+            width: 250px;
+            margin: 0 0 20px 0;
+          "
+        >
+          <div
+            style="
+              background-color: red;
+              opacity: 0.3;
+              height: 200px;
+              margin: 10px;
+            "
+          ></div>
+        </div>
+        <h4 style="margin-top: 80px">overflow: hidden</h4>
+        <p>넘치는 영역은 부모 요소에 맞춰 잘라낸다</p>
+        <div
+          style="
+            overflow: hidden;
+            background-color: #dfd6d6;
+            height: 150px;
+            width: 250px;
+            margin: 0 0 20px 0;
+          "
+        >
+          <div
+            style="
+              background-color: red;
+              opacity: 0.3;
+              height: 200px;
+              margin: 10px;
+            "
+          ></div>
+        </div>
+        <h4>overflow: scroll</h4>
+        <p>콘텐츠를 자르되 나머지를 볼 수 있도록 스크롤을 생성한다.</p>
+        <div
+          style="
+            overflow: scroll;
+            background-color: #dfd6d6;
+            height: 150px;
+            width: 250px;
+            margin: 0 0 20px 0;
+          "
+        >
+          <div
+            style="
+              background-color: red;
+              opacity: 0.3;
+              height: 200px;
+              margin: 10px;
+            "
+          ></div>
+        </div>
+        <h4>overflow: auto</h4>
+        <p>사용자 에이전트(웹에선 브라우저)가 결정하게 한다.</p>
+        <div
+          style="
+            overflow: auto;
+            background-color: #dfd6d6;
+            height: 150px;
+            width: 250px;
+            margin: 0 0 20px 0;
+          "
+        >
+          <div
+            style="
+              background-color: red;
+              opacity: 0.3;
+              height: 200px;
+              margin: 10px;
+            "
+          ></div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="align-center">
+      <div class="button-wrapper">
+        <a class="back-button" href="/src/live-server/properties/">⬅ index로 돌아가기</a>
+      </div>
+    </footer>
+  </body>
 </html>
