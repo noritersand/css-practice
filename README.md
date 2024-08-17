@@ -1,6 +1,5 @@
 # css-lab
 
-CSS testbed
+VSCode [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)나 파이썬 `http.server` 모듈로 실행
 
-VSCode [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)로 확인
-
+프리티어 필요하면 `npm install`

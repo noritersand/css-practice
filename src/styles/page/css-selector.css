@@ -1,0 +1,17 @@
+.read-only-test input:read-only,
+.read-only-test select:read-only,
+.read-only-test textarea:read-only {
+  background-color: cornflowerblue;
+}
+
+.read-write-test input:read-write,
+.read-write-test select:read-write,
+.read-write-test textarea:read-write {
+  background-color: deepskyblue;
+}
+
+.disabled-test input:disabled,
+.disabled-test select:disabled,
+.disabled-test textarea:disabled {
+  background-color: indianred;
+}

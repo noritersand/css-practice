@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>CSS: inputs style</title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="/public/images/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/src/styles/global/normalize.css" />
+  <link rel="stylesheet" href="/src/styles/global/letters.css" />
+  <link rel="stylesheet" href="/src/styles/global/style.css" />
+  <link rel="stylesheet" href="/src/styles/page/css-selector.css" />
+</head>
+<body>
+<div class="align-center">
+  <h1>CSS Selectors</h1>
+  <p>CSS 셀렉터 테스트 페이지</p>
+  <h4>도움말</h4>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors</a>
+    </li>
+  </ul>
+
+  <h2>:read-only</h2>
+  <section class="read-only-test">
+    <h3>text</h3>
+    <div class="result">
+      <input type="text">
+      <input type="text">
+      <input type="text" read-only>
+      <input type="text" readonly>
+      <input type="text" disabled>
+    </div>
+
+    <h3>radio</h3>
+    <div class="result">
+      <input type="radio">&nbsp;&nbsp;
+      <input type="radio">&nbsp;&nbsp;
+      <input type="radio" readonly>&nbsp;&nbsp;
+      <input type="radio" disalbed>&nbsp;&nbsp;
+    </div>
+
+    <h3>checkbox</h3>
+    <div class="result">
+      <input type="checkbox">&nbsp;&nbsp;
+      <input type="checkbox">&nbsp;&nbsp;
+      <input type="checkbox">&nbsp;&nbsp;
+      <input type="checkbox">&nbsp;&nbsp;
+    </div>
+
+    <h3>select</h3>
+    <div class="result">
+      <select style="width: 100px">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      <select style="width: 100px" disabled>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+    <div class="description">
+      <p>select는 readonly 속성이 없고 :read-only 셀렉터는 select 태그를 무조건 선택하는 현상이 있음.</p>
+      <p>그리고 :read-only 셀렉터는 disabled 속성이 있는 태그도 선택함</p>
+    </div>
+
+    <h3>textarea</h3>
+    <div class="result">
+      <textarea cols="5" rows="3"></textarea>
+      <textarea cols="5" rows="3" readonly></textarea>
+      <textarea cols="5" rows="3" disabled></textarea>
+    </div>
+  </section>
+
+  <h2>:read-write</h2>
+  <section class="read-write-test">
+    <h3>text</h3>
+    <div class="result">
+      <input type="text">
+      <input type="text">
+      <input type="text" read-write>
+      <input type="text" readonly>
+      <input type="text" disabled>
+    </div>
+
+    <h3>radio</h3>
+    <div class="result">
+      <input type="radio">&nbsp;&nbsp;
+      <input type="radio">&nbsp;&nbsp;
+      <input type="radio" readonly>&nbsp;&nbsp;
+      <input type="radio" disalbed>&nbsp;&nbsp;
+    </div>
+
+    <h3>checkbox</h3>
+    <div class="result">
+      <input type="checkbox">&nbsp;&nbsp;
+      <input type="checkbox">&nbsp;&nbsp;
+      <input type="checkbox">&nbsp;&nbsp;
+      <input type="checkbox">&nbsp;&nbsp;
+    </div>
+
+    <h3>select</h3>
+    <div class="result">
+      <select style="width: 100px">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      <select style="width: 100px" disabled>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+    <div class="description">
+      <p>:read-write는 select 태그를 선택하지 않음</p>
+    </div>
+
+    <h3>textarea</h3>
+    <div class="result">
+      <textarea cols="5" rows="3"></textarea>
+      <textarea cols="5" rows="3" readonly></textarea>
+      <textarea cols="5" rows="3" disabled></textarea>
+    </div>
+  </section>
+
+  <h2>:disabled</h2>
+  <section class="disabled-test">
+    <h3>text</h3>
+    <div class="result">
+      <input type="text">
+      <input type="text">
+      <input type="text" read-only>
+      <input type="text" readonly>
+      <input type="text" disabled>
+    </div>
+
+    <h3>radio</h3>
+    <div class="result">
+      <input type="radio">&nbsp;&nbsp;
+      <input type="radio">&nbsp;&nbsp;
+      <input type="radio" readonly>&nbsp;&nbsp;
+      <input type="radio" disalbed>&nbsp;&nbsp;
+    </div>
+
+    <h3>checkbox</h3>
+    <div class="result">
+      <input type="checkbox">&nbsp;&nbsp;
+      <input type="checkbox">&nbsp;&nbsp;
+      <input type="checkbox">&nbsp;&nbsp;
+      <input type="checkbox">&nbsp;&nbsp;
+    </div>
+
+    <h3>select</h3>
+    <div class="result">
+      <select style="width: 100px">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      <select style="width: 100px" disabled>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+
+    <h3>textarea</h3>
+    <div class="result">
+      <textarea cols="5" rows="3"></textarea>
+      <textarea cols="5" rows="3" readonly></textarea>
+      <textarea cols="5" rows="3" disabled></textarea>
+    </div>
+  </section>
+</div>
+</body>
+</html>
