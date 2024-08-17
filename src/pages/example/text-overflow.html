@@ -33,7 +33,7 @@
     <section>
       <h2>준비 작업</h2>
       <p>우선 width가 고정값인데 컨텐츠가 길기만 하면</p>
-      <div class="result" style="width: 200px;">
+      <div class="code-result" style="width: 200px;">
         <p style="width: 100%;">겁나긴문자열겁나긴문자열겁나긴문자열겁나긴문자열</p>
       </div>
       <br>
@@ -44,7 +44,7 @@
         </div>
       --></code></pre>
       <p>그럼 아래처럼 박스 모델보다 긴 컨텐츠가 잘려서 보인다.</p>
-      <div class="result" style="width: 200px;">
+      <div class="code-result" style="width: 200px;">
         <p style="width: 100%; white-space: nowrap; overflow: hidden;">겁나긴문자열겁나긴문자열겁나긴문자열겁나긴문자열</p>
       </div>
       <p>text-overflow는 이 상태에서 적용하는 프로퍼티다.</p>
@@ -60,7 +60,7 @@
           <p style="width: 100%; white-space: nowrap; overflow: hidden; text-overflow: clip;">겁나긴문자열겁나긴문자열겁나긴문자열겁나긴문자열</p>
         </div>
       --></code></pre>
-      <div class="result" style="width: 200px;">
+      <div class="code-result" style="width: 200px;">
         <p style="width: 100%; white-space: nowrap; overflow: hidden; text-overflow: clip;">겁나긴문자열겁나긴문자열겁나긴문자열겁나긴문자열</p>
       </div>
 
@@ -71,7 +71,7 @@
           <p style="width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">겁나긴문자열겁나긴문자열겁나긴문자열겁나긴문자열</p>
         </div>
       --></code></pre>
-      <div class="result" style="width: 200px;">
+      <div class="code-result" style="width: 200px;">
         <p style="width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">겁나긴문자열겁나긴문자열겁나긴문자열겁나긴문자열</p>
       </div>
     </section>
@@ -79,14 +79,14 @@
     <section>
       <h2>번외 word-break: break-all</h2>
       <p>앞에서 박스 모델보다 긴 컨텐츠는 자동으로 줄 바뀜이 발생한다고 했지만</p>
-      <div class="result" style="width: 200px;">
+      <div class="code-result" style="width: 200px;">
         <p style="width: 100%;">겁나긴문자열겁나긴문자열겁나긴문자열겁나긴문자열</p>
         <p style="width: 100%;">일천구백구십구만구천구백구십구원</p>
         <p style="width: 100%;">삼쩜일사일오구이육오삼오팔구칠구삼이삼팔사육이육사삼삼팔</p>
         <p style="width: 100%;">111111111111 11111111 111111111111 111111111111</p>
       </div>
       <p>공백 없이 연속적으로 이어지는 숫자와 알파벳은 줄이 바뀌지 않는다.</p>
-      <div class="result" style="width: 200px;">
+      <div class="code-result" style="width: 200px;">
         <p style="width: 100%;">1111111111111111111111111111111111111</p>
         <p style="width: 100%;">1234567890123456789012345678901234567</p>
         <p style="width: 100%;">abcdefgabcdefgabcdefgabcdefgabcdefg</p>
@@ -98,7 +98,7 @@
           <p style="width: 100%; word-break: break-all;">1111111111111111111111111111111111122222222222</p>
         </div>
       --></code></pre>
-      <div class="result" style="width: 200px;">
+      <div class="code-result" style="width: 200px;">
         <p style="width: 100%; word-break: break-all;">1111111111111111111111111111111111111</p>
         <p style="width: 100%; word-break: break-all;">1234567890123456789012345678901234567</p>
         <p style="width: 100%; word-break: break-all;">abcdefgabcdefgabcdefgabcdefgabcdefg</p>
