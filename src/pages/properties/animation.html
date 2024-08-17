@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>CSS Properties: animation</title>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="/public/images/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/src/styles/global/normalize.css" />
+  <link rel="stylesheet" href="/src/styles/global/letters.css" />
+  <link rel="stylesheet" href="/src/styles/global/style.css" />
+  <link rel="stylesheet" href="/public/lib/prism/prism.css" />
+  <script src="/public/lib/prism/prism.js"></script>
+  <script type="module" src="/src/scripts/fire-when-ready.js"></script>
+  <style>
+      /*:root {*/
+      /*    overflow: hidden; !* hides any part of the sun below the horizon *!*/
+      /*    background-color: lightblue;*/
+      /*    display: flex;*/
+      /*    justify-content: center; !* centers the sun in the background *!*/
+      /*}*/
+
+      .sun {
+          background-color: yellow;
+          border-radius: 50%; /* creates a circular background */
+          height: 100vh; /* makes the sun the size of the viewport */
+          aspect-ratio: 1 / 1;
+          animation: 4s linear 0s infinite alternate sun-rise;
+      }
+
+      @keyframes sun-rise {
+          from {
+              /* pushes the sun down past the viewport */
+              transform: translateY(110vh);
+          }
+          to {
+              /* returns the sun to its default position */
+              transform: translateY(0);
+          }
+      }
+  </style>
+</head>
+<body>
+<header>
+  <nav></nav>
+</header>
+
+<main class="align-center">
+  <article>
+    <h1>CSS Properties: animation</h1>
+
+    <section>
+      <div id="toc"></div>
+    </section>
+
+    <section>
+      <h2>개요</h2>
+      <p>animation은 스타일 사이에 애니메이션을 적용할 때 사용한다.</p>
+      <p>다음 프로퍼티들의 약어다:</p>
+      <ul>
+        <li>animation-name</li>
+        <li>animation-duration</li>
+        <li>animation-timing-function</li>
+        <li>animation-delay</li>
+        <li>animation-iteration-count</li>
+        <li>animation-direction</li>
+        <li>animation-fill-mode</li>
+        <li>animation-play-state</li>
+        <li>animation-timeline</li>
+      </ul>
+      <div class="important">
+        <p>🚧 아직은 설명하기 너무 복잡해서 예시 하나만 작성하고 보류</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>문법 Syntax</h2>
+      <pre><code class="language-js"><!--
+      /* @keyframes duration | easing-function | delay |
+      iteration-count | direction | fill-mode | play-state | name */
+      animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+      /* @keyframes duration | easing-function | delay | name */
+      animation: 3s linear 1s slidein;
+
+      /* two animations */
+      animation:
+        3s linear slidein,
+        3s ease-out 5s slideout;
+      --></code></pre>
+    </section>
+
+    <section>
+      <h2>예시 #1: 일출</h2>
+      <div class="code-wrapper">
+        <pre><code class="language-html"><!--
+        <div class="sun"></div>
+        --></code></pre>
+        <pre><code class="language-css"><!--
+        :root {
+          overflow: hidden; /* hides any part of the sun below the horizon */
+          background-color: lightblue;
+          display: flex;
+          justify-content: center; /* centers the sun in the background */
+        }
+
+        .sun {
+          background-color: yellow;
+          border-radius: 50%; /* creates a circular background */
+          height: 100vh; /* makes the sun the size of the viewport */
+          aspect-ratio: 1 / 1;
+          animation: 4s linear 0s infinite alternate sun-rise;
+        }
+
+        @keyframes sun-rise {
+          from {
+            /* pushes the sun down past the viewport */
+            transform: translateY(110vh);
+          }
+          to {
+            /* returns the sun to its default position */
+            transform: translateY(0);
+          }
+        }
+        --></code></pre>
+      </div>
+      <div class="code-result">
+        <div class="sun"></div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer class="align-center">
+  <div class="back-button-wrapper">
+    <a class="back-button" href="/src/pages/">⬅ index로 돌아가기</a>
+  </div>
+</footer>
+</body>
+</html>
