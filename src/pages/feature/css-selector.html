@@ -8,7 +8,25 @@
   <link rel="stylesheet" href="/src/styles/global/normalize.css" />
   <link rel="stylesheet" href="/src/styles/global/letters.css" />
   <link rel="stylesheet" href="/src/styles/global/style.css" />
-  <link rel="stylesheet" href="/src/styles/page/css-selector.css" />
+  <style>
+      .read-only-test input:read-only,
+      .read-only-test select:read-only,
+      .read-only-test textarea:read-only {
+          background-color: cornflowerblue;
+      }
+
+      .read-write-test input:read-write,
+      .read-write-test select:read-write,
+      .read-write-test textarea:read-write {
+          background-color: deepskyblue;
+      }
+
+      .disabled-test input:disabled,
+      .disabled-test select:disabled,
+      .disabled-test textarea:disabled {
+          background-color: indianred;
+      }
+  </style>
 </head>
 <body>
 <div class="align-center">
@@ -60,7 +78,7 @@
         <option>3</option>
       </select>
     </div>
-    <div class="description">
+    <div class="important">
       <p>select는 readonly 속성이 없고 :read-only 셀렉터는 select 태그를 무조건 선택하는 현상이 있음.</p>
       <p>그리고 :read-only 셀렉터는 disabled 속성이 있는 태그도 선택함</p>
     </div>
@@ -113,7 +131,7 @@
         <option>3</option>
       </select>
     </div>
-    <div class="description">
+    <div class="important">
       <p>:read-write는 select 태그를 선택하지 않음</p>
     </div>
 
