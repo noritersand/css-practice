@@ -1,24 +1,8 @@
 @charset "utf-8";
 
-/*
-input, select, textarea { 
-  margin: 1px 1px 1px 1px;
-}
-button { 
-  margin: 1px 1px 1px 1px;
-}
-code { 
-  padding: 4px; white-space: nowrap; background-color: #EFEFEF;
-}
-pre { 
-  padding: 20px 10px 20px 10px; background-color: #EFEFEF;
-}
-*/
-
 header, main, footer {
     display: flex;
     justify-content: center;
-    /*flex-direction: column;*/
 }
 
 header > nav,
