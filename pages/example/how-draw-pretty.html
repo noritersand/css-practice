@@ -1,44 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <title>가운데 정렬 + 비디오 태그</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="/styles/global/normalize.css" />
-  <link rel="stylesheet" href="/styles/global/letters.css" />
-  <!-- <link rel="stylesheet" href="/public/styles/style.styles" /> -->
-  <style type="text/css">
-      div.align-center {
-          max-width: 640px;
-          text-align: left;
-          margin: 30px auto;
-      }
-
+  <head>
+    <title>가운데 정렬 + 비디오 태그</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/styles/global/normalize.css" />
+    <link rel="stylesheet" href="/styles/global/letters.css" />
+    <link rel="stylesheet" href="/styles/global/style.css" />
+    <style type="text/css">
       body {
-          margin-top: 20px;
-          text-align: center;
-          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-          background: #ffffff;
-          color: #000000;
-          color: #aaa;
-          background: #222;
-          background: radial-gradient(#333, hsl(200, 30%, 6%));
+        margin-top: 20px;
+        text-align: center;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background: #ffffff;
+        color: #000000;
+        color: #aaa;
+        background: #222;
+        background: radial-gradient(#333, hsl(200, 30%, 6%));
       }
 
-      a, a:hover, a:visited {
-          color: #76DAFF;
+      a,
+      a:hover,
+      a:visited {
+        color: #76daff;
       }
-  </style>
-</head>
-<body>
-<div class="align-center">
-  <h1>가운데 정렬 + 비디오 태그</h1>
-  <video width="640px" height="267px"
-         controls preload="none" poster="/images/dream-of-jordy.png"
-         data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
-    <source src="/videos/dream-of-jordy.mp4" type="video/mp4">
-  </video>
-  <p>style source from <a href="https://videojs.com" target="_blank" rel="noreferrer noopener">https://videojs.com</a>
-  </p>
-</div>
-</body>
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h1>가운데 정렬 + 비디오 태그</h1>
+        <video
+          width="640px"
+          height="267px"
+          controls
+          preload="none"
+          poster="/images/dream-of-jordy.png"
+          data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
+        >
+          <source src="/videos/dream-of-jordy.mp4" type="video/mp4" />
+        </video>
+        <p>
+          style source from
+          <a href="https://videojs.com" target="_blank" rel="noreferrer noopener"
+            >https://videojs.com</a
+          >
+        </p>
+      </article>
+    </main>
+  </body>
 </html>
