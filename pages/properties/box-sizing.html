@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <title>box-sizing</title>
@@ -8,17 +8,10 @@
     <link rel="stylesheet" href="/styles/global/normalize.css" />
     <link rel="stylesheet" href="/styles/global/letters.css" />
     <link rel="stylesheet" href="/styles/global/style.css" />
+    <link rel="stylesheet" href="/styles/properties/box-sizing.css" />
     <link rel="stylesheet" href="/lib/prism/prism.css" />
     <script src="/lib/prism/prism.js"></script>
-    <style>
-      .green-box {
-        background-color: rgba(0, 128, 0, 0.61);
-        width: 200px;
-        padding: 0 50px;
-        height: 50px;
-        margin: 5px;
-      }
-    </style>
+    <script type="module" src="/scripts/fire-when-ready.js"></script>
   </head>
   <body>
     <header>
@@ -27,7 +20,13 @@
     <main>
       <article>
         <h1>box-sizing</h1>
+
         <section>
+          <div id="toc"></div>
+        </section>
+
+        <section>
+          <h2>개요</h2>
           <pre><code class="language-markup"><!--
         <style>
         .green-box {
@@ -46,20 +45,17 @@
           </div>
           <p>
             똑같은 클래스를 적용했지만
-            <code class="language-js">box-sizing: border-box</code> 쪽의
-            너비가 더 작다.
+            <code class="language-js">box-sizing: border-box</code> 쪽의 너비가 더 작다.
           </p>
           <p>
-            <code class="language-js">box-sizing</code> 프로퍼티는 박스 모델이
-            계산되는 방식을 결정한다. 기본값은
-            <code class="language-js">content-box</code>이며 요소의 너비와
-            높이는 content 영역에 padding과 border를 더한 값으로 결정된다.
+            <code class="language-js">box-sizing</code> 프로퍼티는 박스 모델이 계산되는 방식을
+            결정한다. 기본값은 <code class="language-js">content-box</code>이며 요소의 너비와 높이는
+            content 영역에 padding과 border를 더한 값으로 결정된다.
           </p>
           <p>
-            반면 <code class="language-js">border-box</code>는 요소의 너비와
-            높이를 padding과 border를 포함하여 계산한다. 너비가 100px일 때
-            padding이 20px이면 최종 너비는 120px이 아니라 100px이 되며,
-            content의 너비가 padding만큼 줄어든 80px이 되는 식이다.
+            반면 <code class="language-js">border-box</code>는 요소의 너비와 높이를 padding과
+            border를 포함하여 계산한다. 너비가 100px일 때 padding이 20px이면 최종 너비는 120px이
+            아니라 100px이 되며, content의 너비가 padding만큼 줄어든 80px이 되는 식이다.
           </p>
           <p>
             사이즈 계산을 더 단순하게 만들어주기 때문에
@@ -70,7 +66,7 @@
     </main>
 
     <footer>
-        <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
+      <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
     </footer>
   </body>
 </html>

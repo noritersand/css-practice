@@ -1,0 +1,16 @@
+#parent {
+  --parent-bg-color: beige;
+  /* background-color: beige; */
+}
+
+#parent {
+  background-color: var(--parent-bg-color);
+}
+
+#child {
+  background-color: var(--parent-bg-color);
+}
+
+#uncle {
+  background-color: var(--parent-bg-color);
+}

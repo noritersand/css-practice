@@ -8,44 +8,40 @@
     <link rel="stylesheet" href="/styles/global/normalize.css" />
     <link rel="stylesheet" href="/styles/global/letters.css" />
     <link rel="stylesheet" href="/styles/global/style.css" />
-    <style>
-      .read-only-test input:read-only,
-      .read-only-test select:read-only,
-      .read-only-test textarea:read-only {
-        background-color: cornflowerblue;
-      }
-
-      .read-write-test input:read-write,
-      .read-write-test select:read-write,
-      .read-write-test textarea:read-write {
-        background-color: deepskyblue;
-      }
-
-      .disabled-test input:disabled,
-      .disabled-test select:disabled,
-      .disabled-test textarea:disabled {
-        background-color: indianred;
-      }
-    </style>
+    <link rel="stylesheet" href="/styles/feature/css-selector.css" />
+    <link rel="stylesheet" href="/lib/prism/prism.css" />
+    <script src="/lib/prism/prism.js"></script>
+    <script type="module" src="/scripts/fire-when-ready.js"></script>
   </head>
   <body>
     <main class="align-center">
       <article>
         <h1>CSS Selectors</h1>
-        <p>CSS 셀렉터 테스트 페이지</p>
-        <h4>도움말</h4>
-        <ul>
-          <li>
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors"
-              target="_blank"
-              >https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors</a
-            >
-          </li>
-        </ul>
 
-        <h2>:read-only</h2>
+        <section>
+          <div id="toc"></div>
+          <div class="ref-links mrgn-btm">
+            <h4>참고 문서</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors"
+                  target="_blank"
+                  >https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>개요</h2>
+          <p>CSS 셀렉터 테스트 페이지</p>
+        </section>
+
         <section class="read-only-test">
+          <h2>:read-only</h2>
+
           <h3>text</h3>
           <div class="code-result">
             <input type="text" />
@@ -96,8 +92,9 @@
           </div>
         </section>
 
-        <h2>:read-write</h2>
         <section class="read-write-test">
+          <h2>:read-write</h2>
+
           <h3>text</h3>
           <div class="code-result">
             <input type="text" />
@@ -144,8 +141,9 @@
           </div>
         </section>
 
-        <h2>:disabled</h2>
         <section class="disabled-test">
+          <h2>:disabled</h2>
+
           <h3>text</h3>
           <div class="code-result">
             <input type="text" />
@@ -191,7 +189,7 @@
       </article>
     </main>
     <footer>
-        <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
+      <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
     </footer>
   </body>
 </html>

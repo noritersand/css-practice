@@ -8,103 +8,59 @@
     <link rel="stylesheet" href="/styles/global/normalize.css" />
     <link rel="stylesheet" href="/styles/global/letters.css" />
     <link rel="stylesheet" href="/styles/global/style.css" />
+    <link rel="stylesheet" href="/styles/feature/floating-label.css" />
     <link rel="stylesheet" href="/lib/prism/prism.css" />
     <script src="/lib/prism/prism.js"></script>
     <script type="module" src="/scripts/fire-when-ready.js"></script>
-    <style>
-      .label-before,
-      .field input:focus + label::before,
-      .field input:valid + label::before {
-        line-height: 20px;
-        font-size: 12px;
-        top: -10px;
-        background: #fff;
-        padding: 0 6px;
-        left: 9px;
-      }
-
-      .container {
-        width: 80%;
-        margin: 30px 10%;
-      }
-
-      .field {
-        position: relative;
-        margin-bottom: 15px;
-      }
-
-      .field label::before {
-        content: attr(title);
-        position: absolute;
-        top: 0;
-        left: 15px;
-        line-height: 40px;
-        font-size: 14px;
-        color: #777;
-        transition: 300ms all;
-      }
-
-      .field input {
-        width: 100%;
-        line-height: 40px;
-        padding: 0 15px;
-        box-sizing: border-box;
-        font-size: 14px;
-        color: #222;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-      }
-
-      .field input:focus {
-        outline: 0;
-        border-color: blue;
-      }
-
-      .field input:valid + label::before {
-        content: attr(data-title);
-      }
-
-      .field input:focus + label::before {
-        color: blue;
-      }
-    </style>
   </head>
   <body>
     <main>
       <article>
         <h1>Floating Label</h1>
 
-        <div class="field">
-          <input
-            type="text"
-            required
-            autocomplete="off"
-            id="username"
-            value="fixalot@example.com"
-          />
-          <label
-            for="username"
-            title="로그인 이메일을 입력하세요"
-            data-title="로그인 이메일"
-          ></label>
-        </div>
+        <section>
+          <div id="toc"></div>
+        </section>
 
-        <div class="field">
-          <input type="password" required autocomplete="off" id="password" />
-          <label for="password" title="비밀번호를 입력하세요" data-title="비밀번호"></label>
-        </div>
+        <section>
+          <h2>개요</h2>
+          <p>입력란에 포커스가 생기면 placeholder를 테두리로 들어올리는 기능</p>
+        </section>
 
-        <br />
-        <p>
-          소스 출처:
-          <a href="https://codepen.io/tayfunerbilen/pen/qMKxeQ" target="_blank"
-            >https://codepen.io/tayfunerbilen/pen/qMKxeQ</a
-          >
-        </p>
+        <section>
+          <h2>예시</h2>
+          <div class="field">
+            <input
+              type="text"
+              required
+              autocomplete="off"
+              id="username"
+              value="fixalot@example.com"
+            />
+            <label
+              for="username"
+              title="로그인 이메일을 입력하세요"
+              data-title="로그인 이메일"
+            ></label>
+          </div>
+
+          <div class="field">
+            <input type="password" required autocomplete="off" id="password" />
+            <label for="password" title="비밀번호를 입력하세요" data-title="비밀번호"></label>
+          </div>
+
+          <br />
+          <p>
+            소스 출처:
+            <a href="https://codepen.io/tayfunerbilen/pen/qMKxeQ" target="_blank"
+              >https://codepen.io/tayfunerbilen/pen/qMKxeQ</a
+            >
+          </p>
+        </section>
       </article>
     </main>
     <footer>
-        <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
+      <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
     </footer>
   </body>
 </html>
