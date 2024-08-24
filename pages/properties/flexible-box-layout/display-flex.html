@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/letters.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/properties/flexible-box/display-flex.css" />
+    <link rel="stylesheet" href="/styles/properties/flexible-box-layout/display-flex.css" />
     <link rel="stylesheet" href="/lib/prism/prism.css" />
     <script src="/lib/prism/prism.js"></script>
     <script type="module" src="/scripts/fire-when-ready.js"></script>
@@ -27,42 +27,25 @@
 
         <section>
           <h2>개요</h2>
+          <p>
+            display: flex는 CSS의 플렉시블 박스 레이아웃(flexible box layout, 줄여서 flexbox) 모듈을
+            활성화하는 프로퍼티로, CSS 박스 모델의 레이아웃을 1차원으로 정의할 때 사용한다.
+            기존에 사용하던 float나 inline-box 같은 오래된 프로퍼티 비해 배치와 정렬이 매우
+            쉽다.
+          </p>
+          <pre><code class="language-css"><!--
+          .container {
+            display: flex;
+            justify-content: space-evenly;
+          }
+          --></code></pre>
           <div class="code-result">
-            <div style="display: flex">
-              <div
-                style="
-                  background-color: skyblue;
-                  border: 1px solid black;
-                  padding: 10px;
-                  margin: 10px;
-                "
-              >
-                left
-              </div>
-              <div
-                style="
-                  background-color: palegoldenrod;
-                  border: 1px solid black;
-                  padding: 10px;
-                  margin: 10px;
-                "
-              >
-                center
-              </div>
-              <div
-                style="
-                  background-color: rgb(104, 180, 104);
-                  border: 1px solid black;
-                  padding: 10px;
-                  margin: 10px;
-                "
-              >
-                right
-              </div>
+            <div class="container">
+              <div>left</div>
+              <div>center</div>
+              <div>right</div>
             </div>
           </div>
-          <p><code class="language-js">display:flex</code> 속성은 어쩌구다.</p>
-          <p><code class="language-js">div</code> 같은 블록 태그를 같은 줄에 나열하는 가장 쉬운 방법이다.</p>
         </section>
 
         <section>

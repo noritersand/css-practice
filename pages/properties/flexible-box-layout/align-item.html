@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="ko">
   <head>
-    <title>align-content</title>
+    <title>align-items</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/letters.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/properties/flexible-box/align-content.css" />
+    <link rel="stylesheet" href="/styles/properties/flexible-box-layout/align-items.css" />
     <link rel="stylesheet" href="/lib/prism/prism.css" />
     <script src="/lib/prism/prism.js"></script>
     <script type="module" src="/scripts/fire-when-ready.js"></script>
@@ -20,7 +20,7 @@
 
     <main>
       <article>
-        <h1>align-content</h1>
+        <h1>align-items</h1>
 
         <section>
           <div id="toc"></div>
@@ -28,8 +28,15 @@
 
         <section>
           <h2>개요</h2>
-          <p>align-content는 플렉스 박스나 그리드 레이아웃에서 여러 줄로 나뉜 콘텐츠 간의 간격을 교차축 방향으로 정렬할 때 사용하는 프로퍼티다.</p>
-          <p>🚨이 프로퍼티는 한 줄로 이뤄진 플렉스 컨테이너(flex-wrap: nowrap일 때)에는 아무런 효과가 없다.</p>
+          <p>
+            align-items는 플렉스 컨테이너(flex container)의 교차축(cross-axis)을 따라 나열된 플렉스
+            아이템들의 정렬을 정의한다.
+          </p>
+          <p>
+            교차축이 수직(세로)이 될지 수평(가로)이 될지는 flex-direction에 따라 달라진다.
+            flex-direction이 row(기본값)일 때 교차축은 수직이지만, flex-direction이 column일 때의
+            교차축은 수평이다.
+          </p>
           <p></p>
         </section>
 
