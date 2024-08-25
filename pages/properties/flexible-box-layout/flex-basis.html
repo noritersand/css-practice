@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>flex: grow</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/letters.css" />
+    <link rel="stylesheet" href="/styles/properties/flexible-box-layout/flex-basis.css" />
+    <link rel="stylesheet" href="/lib/prism/prism.css" />
+    <script src="/lib/prism/prism.js"></script>
+    <script type="module" src="/scripts/fire-when-ready.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+
+    <main>
+      <article>
+        <h1>flex: grow</h1>
+
+        <section>
+          <div id="toc"></div>
+        </section>
+
+        <section>
+          <h2>개요</h2>
+          <p>flex: basis는 플렉스박스 레이아웃에서 플렉스 아이템의 기본 크기를 설정하는 프로퍼티다.</p>
+          <p>이 값은 아이템이 메인 축에서 차지할 초기 크기를 결정하며, flex: grow의 자동 크기 조절에 영향을 끼친다. 가령 flex: grow가 같은 아이템이 있더라도 flex: basis 값이 양수로 지정된 아이템이 다른 아이템보다 남은 공간을 더 많이 차지하게 된다. 이는 기본 크기가 다르기 때문이다.</p>
+          <p>flex: shrink에도 영향이 있는데, 플렉스 아이템이 자동으로 줄어들 때 flex: basis보다 줄어들지 않게 된다.</p>
+
+        </section>
+
+        <section>
+          <h2>width, height, min-width, min-height와의 차이점</h2>
+
+        </section>
+
+        <section>
+          <h2>Values</h2>
+
+          <h3>some-value1</h3>
+          <p>이 값은 어쩌구1이다</p>
+          <div class="code-result">여기는 테스트 결과</div>
+
+          <h3>some-value2</h3>
+          <p>이 값은 어쩌구2다</p>
+          <div class="code-result">여기는 테스트 결과</div>
+
+          <div class="important">중요</div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
+    </footer>
+  </body>
+</html>

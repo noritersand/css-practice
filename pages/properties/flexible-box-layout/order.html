@@ -36,16 +36,25 @@
 
         <section>
           <h2>Values</h2>
+          <p>order의 값은 -1, 0, 1 같은 정수만 가능</p>
+          <pre><code class="language-html"><!--
+          <div class="flex-container last-baseline">
+            <div class="flex-item">1</div>
+            <div class="flex-item" style="order: -1">2</div>
+            <div class="flex-item" style="order: 3">3</div>
+            <div class="flex-item" style="order: 2">4</div>
+          </div>
+          --></code></pre>
+          <div class="code-result">
+            <div class="flex-container last-baseline">
+              <div class="flex-item">1</div>
+              <div class="flex-item" style="order: -1">2</div>
+              <div class="flex-item" style="order: 2">3</div>
+              <div class="flex-item" style="order: 1">4</div>
+            </div>
+          </div>
+          <p>생략하면 order는 0이므로 1보다 빠른 것에 주의할 것. 음수도 가능하며 0보다 빠르다.</p>
 
-          <h3>some-value1</h3>
-          <p>이 값은 어쩌구1이다</p>
-          <div class="code-result">여기는 테스트 결과</div>
-
-          <h3>some-value2</h3>
-          <p>이 값은 어쩌구2다</p>
-          <div class="code-result">여기는 테스트 결과</div>
-
-          <div class="important">중요</div>
         </section>
       </article>
     </main>

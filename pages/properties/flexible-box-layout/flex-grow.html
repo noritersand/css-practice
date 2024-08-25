@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>flex: grow</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/letters.css" />
+    <link rel="stylesheet" href="/styles/properties/flexible-box-layout/flex-grow.css" />
+    <link rel="stylesheet" href="/lib/prism/prism.css" />
+    <script src="/lib/prism/prism.js"></script>
+    <script type="module" src="/scripts/fire-when-ready.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+
+    <main>
+      <article>
+        <h1>flex: grow</h1>
+
+        <section>
+          <div id="toc"></div>
+        </section>
+
+        <section>
+          <h2>개요</h2>
+          <p>flex: grow는 플렉스박스 레이아웃에서 플렉스 아이템이 사용 가능한 남은 공간을 자동으로 채울 때, 다른 아이템에 비해 얼마나 더 차지할지를 결정한다.</p>
+          <p>기본값은 0이다. 값이 0이면 추가 공간을 차지하지 않고 지정된 크기를 유지한다.</p>
+          <p>같은 플렉스 컨테이너 내에서 항목들의 grow 값이 다르면, 다르게 지정된 만큼 비율적으로 더 차지하려고 한다.</p>
+          <p>반대 개념의 프로퍼티로 flex: shrink가 있다.</p>
+        </section>
+
+        <section>
+          <h2>Values</h2>
+
+          <h3>some-value1</h3>
+          <p>이 값은 어쩌구1이다</p>
+          <div class="code-result">여기는 테스트 결과</div>
+
+          <h3>some-value2</h3>
+          <p>이 값은 어쩌구2다</p>
+          <div class="code-result">여기는 테스트 결과</div>
+
+          <div class="important">중요</div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
+    </footer>
+  </body>
+</html>

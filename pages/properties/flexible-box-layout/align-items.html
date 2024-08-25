@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="ko">
   <head>
-    <title>justify-content</title>
+    <title>align-items</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/letters.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/properties/flexible-box-layout/justify-content.css" />
+    <link rel="stylesheet" href="/styles/properties/flexible-box-layout/align-items.css" />
     <link rel="stylesheet" href="/lib/prism/prism.css" />
     <script src="/lib/prism/prism.js"></script>
     <script type="module" src="/scripts/fire-when-ready.js"></script>
@@ -20,7 +20,7 @@
 
     <main>
       <article>
-        <h1>justify-content</h1>
+        <h1>align-items</h1>
 
         <section>
           <div id="toc"></div>
@@ -29,70 +29,23 @@
         <section>
           <h2>개요</h2>
           <p>
-            justify-content는 플렉스 컨테이너(flex container)의 메인축(main-axis)을 따라 나열된
-            플렉스 아이템들의 정렬을 정의한다.
+            align-items는 플렉스 컨테이너(flex container)의 교차축(cross-axis)을 따라 나열된 플렉스
+            아이템들의 정렬을 정의한다.
           </p>
           <p>
-            메인축이 수평(가로)이 될지 수직(세로)이 될지는 flex-direction에 따라 달라진다.
-            flex-direction이 row(기본값)일 때 메인축은 수평이지만, flex-direction이 column일 때의
-            메인축은 수직이다.
+            교차축이 수직(세로)이 될지 수평(가로)이 될지는 flex-direction에 따라 달라진다.
+            flex-direction이 row(기본값)일 때 교차축은 수직이지만, flex-direction이 column일 때의
+            교차축은 수평이다.
           </p>
           <p></p>
         </section>
 
-        <section>
+        <section id="main-section">
           <h2>Values</h2>
 
           <h3>normal(default)</h3>
-          <p>기본값. 너비가 자동인 다중 열(multi-column) 컨테이너를 제외, stretch와 동일하게 작동한다. 컨테이너를 채우기 위해 늘리는 대신 지정된 열 너비를 사용한다. stretch가 플렉스 컨테이너에서 start처럼 작동하는 것과 같다.</p>
           <div class="code-result">
             <div class="flex-container normal">
-              <div class="flex-item">1</div>
-              <div class="flex-item">2</div>
-              <div class="flex-item">3</div>
-              <div class="flex-item">4</div>
-              <div class="flex-item">5</div>
-            </div>
-          </div>
-
-          <h3>start</h3>
-          <p>항목들은 정렬 컨테이너 메인 축의 시작 가장자리를 향해 packed flush 된다. (<span style="text-decoration: line-through">뭔소리야야발</span>)</p>
-          <div class="code-result">
-            <div class="flex-container start">
-              <div class="flex-item">1</div>
-              <div class="flex-item">2</div>
-              <div class="flex-item">3</div>
-              <div class="flex-item">4</div>
-              <div class="flex-item">5</div>
-            </div>
-          </div>
-
-          <h3>end</h3>
-          <p>start와 같지만 반대 방향으로 작동함.</p>
-          <div class="code-result">
-            <div class="flex-container end">
-              <div class="flex-item">1</div>
-              <div class="flex-item">2</div>
-              <div class="flex-item">3</div>
-              <div class="flex-item">4</div>
-              <div class="flex-item">5</div>
-            </div>
-          </div>
-
-          <h3>flex-start</h3>
-          <div class="code-result">
-            <div class="flex-container flex-start">
-              <div class="flex-item">1</div>
-              <div class="flex-item">2</div>
-              <div class="flex-item">3</div>
-              <div class="flex-item">4</div>
-              <div class="flex-item">5</div>
-            </div>
-          </div>
-
-          <h3>flex-end</h3>
-          <div class="code-result">
-            <div class="flex-container flex-end">
               <div class="flex-item">1</div>
               <div class="flex-item">2</div>
               <div class="flex-item">3</div>
@@ -112,9 +65,9 @@
             </div>
           </div>
 
-          <h3>left</h3>
+          <h3>start</h3>
           <div class="code-result">
-            <div class="flex-container left">
+            <div class="flex-container start">
               <div class="flex-item">1</div>
               <div class="flex-item">2</div>
               <div class="flex-item">3</div>
@@ -123,9 +76,9 @@
             </div>
           </div>
 
-          <h3>right</h3>
+          <h3>end</h3>
           <div class="code-result">
-            <div class="flex-container right">
+            <div class="flex-container end">
               <div class="flex-item">1</div>
               <div class="flex-item">2</div>
               <div class="flex-item">3</div>
@@ -134,9 +87,9 @@
             </div>
           </div>
 
-          <h3>space-between</h3>
+          <h3>self-start</h3>
           <div class="code-result">
-            <div class="flex-container space-between">
+            <div class="flex-container self-start">
               <div class="flex-item">1</div>
               <div class="flex-item">2</div>
               <div class="flex-item">3</div>
@@ -145,9 +98,9 @@
             </div>
           </div>
 
-          <h3>space-around</h3>
+          <h3>self-end</h3>
           <div class="code-result">
-            <div class="flex-container space-around">
+            <div class="flex-container self-end">
               <div class="flex-item">1</div>
               <div class="flex-item">2</div>
               <div class="flex-item">3</div>
@@ -156,9 +109,31 @@
             </div>
           </div>
 
-          <h3>space-evenly</h3>
+          <h3>baseline</h3>
           <div class="code-result">
-            <div class="flex-container space-evenly">
+            <div class="flex-container baseline">
+              <div class="flex-item">1</div>
+              <div class="flex-item">2</div>
+              <div class="flex-item">3</div>
+              <div class="flex-item">4</div>
+              <div class="flex-item">5</div>
+            </div>
+          </div>
+
+          <h3>first-baseline</h3>
+          <div class="code-result">
+            <div class="flex-container first-baseline">
+              <div class="flex-item">1</div>
+              <div class="flex-item">2</div>
+              <div class="flex-item">3</div>
+              <div class="flex-item">4</div>
+              <div class="flex-item">5</div>
+            </div>
+          </div>
+
+          <h3>last-baseline</h3>
+          <div class="code-result">
+            <div class="flex-container last-baseline">
               <div class="flex-item">1</div>
               <div class="flex-item">2</div>
               <div class="flex-item">3</div>
@@ -170,6 +145,17 @@
           <h3>stretch</h3>
           <div class="code-result">
             <div class="flex-container stretch">
+              <div class="flex-item">1</div>
+              <div class="flex-item">2</div>
+              <div class="flex-item">3</div>
+              <div class="flex-item">4</div>
+              <div class="flex-item">5</div>
+            </div>
+          </div>
+
+          <h3>anchor-center</h3>
+          <div class="code-result">
+            <div class="flex-container anchor-center">
               <div class="flex-item">1</div>
               <div class="flex-item">2</div>
               <div class="flex-item">3</div>
@@ -192,6 +178,28 @@
           <h3>unsafe</h3>
           <div class="code-result">
             <div class="flex-container unsafe">
+              <div class="flex-item">1</div>
+              <div class="flex-item">2</div>
+              <div class="flex-item">3</div>
+              <div class="flex-item">4</div>
+              <div class="flex-item">5</div>
+            </div>
+          </div>
+
+          <h3>flex-start</h3>
+          <div class="code-result">
+            <div class="flex-container flex-start">
+              <div class="flex-item">1</div>
+              <div class="flex-item">2</div>
+              <div class="flex-item">3</div>
+              <div class="flex-item">4</div>
+              <div class="flex-item">5</div>
+            </div>
+          </div>
+
+          <h3>flex-end</h3>
+          <div class="code-result">
+            <div class="flex-container flex-end">
               <div class="flex-item">1</div>
               <div class="flex-item">2</div>
               <div class="flex-item">3</div>

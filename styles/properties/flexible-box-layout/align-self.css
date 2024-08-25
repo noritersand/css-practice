@@ -1,0 +1,57 @@
+.flex-container {
+  display: flex;
+  gap: 10px;
+  height: 200px;
+}
+
+.flex-item {
+  width: 100px;
+  height: 50px;
+  background-color: #629d3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 34px;
+}
+
+.flex-container.auto .flex-item:nth-child(1) {
+  align-self: auto;
+}
+
+.flex-container.normal .flex-item:nth-child(1) {
+  align-self: normal;
+}
+.flex-container.self-start .flex-item:nth-child(1) {
+  align-self: self-start;
+}
+.flex-container.self-end .flex-item:nth-child(1) {
+  align-self: self-end;
+}
+.flex-container.flex-start .flex-item:nth-child(1) {
+  align-self: flex-start;
+}
+.flex-container.flex-end .flex-item:nth-child(1) {
+  align-self: flex-end;
+}
+.flex-container.center .flex-item:nth-child(1) {
+  align-self: center;
+}
+.flex-container.baseline .flex-item:nth-child(1) {
+  align-self: baseline;
+}
+.flex-container.first-baseline .flex-item:nth-child(1) {
+  align-self: first-baseline;
+}
+.flex-container.stretch .flex-item:nth-child(1) {
+  align-self: stretch;
+}
+.flex-container.anchor-center .flex-item:nth-child(1) {
+  align-self: anchor-center;
+}
+.flex-container.safe .flex-item:nth-child(1) {
+  align-self: safe;
+}
+.flex-container.unsafe .flex-item:nth-child(1) {
+  align-self: unsafe;
+}

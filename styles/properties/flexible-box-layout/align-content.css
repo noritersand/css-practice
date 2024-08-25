@@ -1,0 +1,53 @@
+.flex-container {
+  display: flex;
+  gap: 10px;
+  height: 200px;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  width: 300px;
+  height: 50px;
+  background-color: #629d3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 34px;
+}
+
+.flex-container.normal {
+  align-content: normal;
+}
+
+.flex-container.start {
+  align-content: start;
+}
+
+.flex-container.center {
+  align-content: center;
+}
+
+.flex-container.end {
+  align-content: end;
+}
+
+.flex-container.flex-start {
+  align-content: flex-start;
+}
+
+.flex-container.flex-end {
+  align-content: flex-end;
+}
+
+.flex-container.baseline {
+  align-content: baseline;
+}
+
+.flex-container.first-baseline {
+  align-content: first-baseline;
+}
+
+.flex-container.last-baseline {
+  align-content: last-baseline;
+}

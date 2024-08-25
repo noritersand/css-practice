@@ -1,0 +1,76 @@
+.flex-container {
+  display: flex;
+  gap: 10px;
+  height: 200px;
+}
+
+.flex-item {
+  width: 100px;
+  height: 50px;
+  background-color: #629d3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 34px;
+}
+
+.flex-container.normal {
+  align-items: normal;
+}
+
+.flex-container.center {
+  align-items: center;
+}
+
+.flex-container.start {
+  align-items: start;
+}
+
+.flex-container.end {
+  align-items: end;
+}
+
+.flex-container.self-start {
+  align-items: self-start;
+}
+
+.flex-container.self-end {
+  align-items: self-end;
+}
+
+.flex-container.baseline {
+  align-items: baseline;
+}
+
+.flex-container.first-baseline {
+  align-items: first-baseline;
+}
+
+.flex-container.last-baseline {
+  align-items: last-baseline;
+}
+
+.flex-container.stretch {
+  align-items: stretch;
+}
+
+.flex-container.anchor-center {
+  align-items: anchor-center;
+}
+
+.flex-container.safe {
+  align-items: safe;
+}
+
+.flex-container.unsafe {
+  align-items: unsafe;
+}
+
+.flex-container.flex-start {
+  align-items: flex-start;
+}
+
+.flex-container.flex-end {
+  align-items: flex-end;
+}

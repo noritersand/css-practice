@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>flex: grow</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/letters.css" />
+    <link rel="stylesheet" href="/styles/properties/flexible-box-layout/flex-shrink.css" />
+    <link rel="stylesheet" href="/lib/prism/prism.css" />
+    <script src="/lib/prism/prism.js"></script>
+    <script type="module" src="/scripts/fire-when-ready.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+
+    <main>
+      <article>
+        <h1>flex: grow</h1>
+
+        <section>
+          <div id="toc"></div>
+        </section>
+
+        <section>
+          <h2>개요</h2>
+          <p>flex: shrink는 플렉스박스 레이아웃에서 플렉스 아이템이 자동으로 줄어들 때 얼마나 비율적으로 줄어들지를 결정하는 프로퍼티다.</p>
+          <p>기본값은 1이다. 모든 플렉스 아이템이 1인 경우 동일한 비율로 줄어든다.</p>
+          <p>특정 아이템의 shrink 값이 다른 아이템보다 더 크면, 줄어들 때 비율적으로 더 많이 줄어든다.</p>
+          <p>0으로 설정하면 공간이 부족해도 자동으로 줄어들지 않는다.</p>
+          <p>반대 개념의 프로퍼티로 flex: grow가 있다.</p>
+        </section>
+
+        <section>
+          <h2>Values</h2>
+
+          <h3>some-value1</h3>
+          <p>이 값은 어쩌구1이다</p>
+          <div class="code-result">여기는 테스트 결과</div>
+
+          <h3>some-value2</h3>
+          <p>이 값은 어쩌구2다</p>
+          <div class="code-result">여기는 테스트 결과</div>
+
+          <div class="important">중요</div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
+    </footer>
+  </body>
+</html>

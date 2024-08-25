@@ -1,0 +1,71 @@
+.flex-container {
+  display: flex;
+  gap: 10px;
+}
+
+.flex-item {
+  width: 200px;
+  height: 50px;
+  background-color: #629d3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 34px;
+}
+
+.flex-container.normal {
+  justify-content: normal;
+}
+
+.flex-container.start {
+  justify-content: start;
+}
+
+.flex-container.end {
+  justify-content: end;
+}
+
+.flex-container.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-container.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-container.center {
+  justify-content: center;
+}
+
+.flex-container left {
+  justify-content: left;
+}
+
+.flex-container.right {
+  justify-content: right;
+}
+
+.flex-container.space-between {
+  justify-content: space-between;
+}
+
+.flex-container.space-around {
+  justify-content: space-around;
+}
+
+.flex-container.space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-container.stretch {
+  justify-content: stretch;
+}
+
+.flex-container.safe {
+  justify-content: safe;
+}
+
+.flex-container.unsafe {
+  justify-content: unsafe;
+}
