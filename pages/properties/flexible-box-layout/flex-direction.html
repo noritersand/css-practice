@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="ko">
   <head>
-    <title>flex</title>
+    <title>flex-direction</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/letters.css" />
-    <link rel="stylesheet" href="/styles/properties/flexible-box-layout/flex.css" />
+    <link rel="stylesheet" href="/styles/properties/flexible-box-layout/flex-direction.css" />
     <link rel="stylesheet" href="/lib/prism/prism.css" />
     <script src="/lib/prism/prism.js"></script>
     <script type="module" src="/scripts/fire-when-ready.js"></script>
@@ -20,7 +20,7 @@
 
     <main>
       <article>
-        <h1>flex</h1>
+        <h1>flex-direction</h1>
 
         <section>
           <div id="toc"></div>
@@ -28,22 +28,30 @@
 
         <section>
           <h2>개요</h2>
-          <p>flex는 flex-grow, flex-shrink, flex-basis를 결합한 단축 프로퍼티다.</p>
+          <p>flex-direction은 플렉스박스 레이아웃에어 플렉스 아이템들이 배치되는 메인 축의 방향을 결정한다.</p>
+          <p>생략하면 좌->우 혹은 위->아래로 배치된다.</p>
 
         </section>
 
         <section>
           <h2>Values</h2>
 
-          <h3>some-value1</h3>
+          <h3>row(기본값)</h3>
           <p>이 값은 어쩌구1이다</p>
           <div class="code-result">여기는 테스트 결과</div>
 
-          <h3>some-value2</h3>
+          <h3>row-reverse</h3>
           <p>이 값은 어쩌구2다</p>
           <div class="code-result">여기는 테스트 결과</div>
 
-          <div class="important">중요</div>
+          <h3>column</h3>
+          <p>이 값은 어쩌구2다</p>
+          <div class="code-result">여기는 테스트 결과</div>
+
+          <h3>column-reverse</h3>
+          <p>이 값은 어쩌구2다</p>
+          <div class="code-result">여기는 테스트 결과</div>
+
         </section>
       </article>
     </main>
