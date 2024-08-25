@@ -51,3 +51,22 @@
 .flex-container.last-baseline {
   align-content: last-baseline;
 }
+
+.flex-container.space-between {
+  align-content: space-between;
+}
+.flex-container.space-around {
+  align-content: space-around;
+}
+.flex-container.space-evenly {
+  align-content: space-evenly;
+}
+.flex-container.stretch {
+  align-content: stretch;
+}
+.flex-container.safe {
+  align-content: safe;
+}
+.flex-container.unsafe {
+  align-content: unsafe;
+}
