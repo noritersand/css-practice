@@ -27,18 +27,23 @@
 
         <section>
           <h2>개요</h2>
-          <p>
-            display: flex는 CSS의 플렉시블 박스 레이아웃(flexible box layout, 줄여서 flexbox) 모듈을
-            활성화하는 프로퍼티로, CSS 박스 모델의 레이아웃을 1차원으로 정의할 때 사용한다.
-            기존에 사용하던 float나 inline-box 같은 오래된 프로퍼티 비해 배치와 정렬이 매우
-            쉽다.
-          </p>
-          <pre><code class="language-css"><!--
-          .container {
-            display: flex;
-            justify-content: space-evenly;
-          }
-          --></code></pre>
+          <p>display: flex는 CSS의 플렉시블 박스 레이아웃(flexible box layout, 줄여서 flexbox) 모듈을 활성화하는 프로퍼티로, CSS 박스 모델의 레이아웃을 1차원으로 정의할 때 사용한다.</p>
+          <p>기존에 사용하던 float나 inline-box 같은 오래된 프로퍼티 비해 배치와 정렬이 매우 쉽다.</p>
+          <div class="code-wrapper">
+            <pre><code class="language-css"><!--
+            .container {
+              display: flex;
+              justify-content: space-between;
+            }
+            --></code></pre>
+            <pre><code class="language-html"><!--
+            <div class="container">
+              <div>left</div>
+              <div>center</div>
+              <div>right</div>
+            </div>
+            --></code></pre>
+          </div>
           <div class="code-result">
             <div class="container">
               <div>left</div>

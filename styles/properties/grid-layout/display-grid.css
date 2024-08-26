@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: 200px 100px;
+  grid-gap: 10px;
+}
+
+.item {
+  background-color: #488f31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}

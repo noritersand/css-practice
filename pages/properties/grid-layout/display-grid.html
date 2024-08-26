@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>display: grid</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/letters.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/properties/grid-layout/display-grid.css" />
+    <link rel="stylesheet" href="/lib/prism/prism.css" />
+    <script src="/lib/prism/prism.js"></script>
+    <script type="module" src="/scripts/fire-when-ready.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+    <main>
+      <article>
+        <h1>display: grid</h1>
+
+        <section>
+          <div id="toc"></div>
+        </section>
+
+        <section>
+          <h2>개요</h2>
+          <p>
+            display: grid는 CSS 그리드 레이아웃(grid layout) 모듈을 활성화하는 프로퍼티로, 그리드
+            레이아웃은 엘리먼트들을 2차원 그리드로 배치하는 데 사용한다.
+          </p>
+          <p>
+            플렉스박스보다 제공되는 기능이 더 많고 강력하다.
+            <del>플렉스박스가 그냥 커피면 그리드는 티오피</del>
+          </p>
+          <div class="code-wrapper">
+            <pre><code class="language-css"><!--
+            .container {
+              display: grid;
+              grid-template-columns: 100px 200px;
+              grid-template-rows: 200px 100px;
+              grid-gap: 10px;
+            }
+            --></code></pre>
+            <pre><code class="language-html"><!--
+            <div class="container">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+              <div class="item">4</div>
+            </div>
+            --></code></pre>
+          </div>
+          <div class="code-result">
+            <div class="container">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+              <div class="item">4</div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>관련 프로퍼티와 함수, 데이터 타입</h2>
+          <p>Properties:</p>
+          <ul>
+            <li>grid-template-columns</li>
+            <li>grid-template-rows</li>
+            <li>grid-template-areas</li>
+            <li>grid-template</li>
+            <li>grid-auto-columns</li>
+            <li>grid-auto-rows</li>
+            <li>grid-auto-flow</li>
+            <li>grid</li>
+            <li>grid-row-start</li>
+            <li>grid-column-start</li>
+            <li>grid-row-end</li>
+            <li>grid-column-end</li>
+            <li>grid-row</li>
+            <li>grid-column</li>
+            <li>grid-area</li>
+            <li>row-gap</li>
+            <li>column-gap</li>
+            <li>gap</li>
+            <li>masonry-auto-flow</li>
+          </ul>
+          <p>Functions</p>
+          <ul>
+            <li>repeat()</li>
+            <li>minmax()</li>
+            <li>fit-content()</li>
+          </ul>
+          <p>Data types</p>
+          <ul>
+            <li>&lt;flex&gt;</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
+    </footer>
+  </body>
+</html>
