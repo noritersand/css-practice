@@ -34,11 +34,11 @@
 }
 
 .item.with-width1 {
-  width: 100px;
+  width: 50px;
   flex-grow: 1;
 }
 
 .item.with-width2 {
-  width: 200px;
+  width: 500px;
   flex-grow: 1;
 }
