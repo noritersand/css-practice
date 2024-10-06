@@ -1,6 +1,7 @@
 .container {
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .item {
@@ -11,7 +12,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 34px;
+  font-size: 20px;
 }
 
 
