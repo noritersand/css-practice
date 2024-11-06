@@ -3,8 +3,8 @@
 ## 서버 실행
 
 ```bash
-npm install
-npm start
+yarn install
+yarn live
 ```
 
 끗.
