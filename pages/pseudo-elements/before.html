@@ -11,6 +11,16 @@
   <link rel="stylesheet" href="/static/lib/prism/prism.css" />
   <script src="/static/lib/prism/prism.js"></script>
   <script type="module" src="/static/scripts/fire-when-ready.js"></script>
+  <style>
+      .main a {
+          color: #0000ff;
+          text-decoration: none;
+      }
+
+      .main a::before {
+          content: '🔗';
+      }
+  </style>
 </head>
 <body>
 <header>
@@ -27,25 +37,25 @@
 
     <section>
       <h2>개요</h2>
-      <p>어쩌구</p>
+      <p><code class="language-js">::before</code>는 선택된 요소의 첫 번째 자식으로 의사 엘리먼트를 생성한다.
+        <code class="language-js">content</code> 프로퍼티와 함께 어떤 엘리먼트를 꾸미는데 사용되곤 한다.</p>
     </section>
 
-    <section>
-      <h2>Syntax</h2>
+    <section class="main">
+      <h2>Examples</h2>
       <pre><code class="language-css"><!--
-          code
+          a {
+            color: #0000ff;
+            text-decoration: none;
+          }
+
+          a::before {
+            content: '🔗';
+          }
           --></code></pre>
-    </section>
-
-    <section>
-      <h2>Values</h2>
-      <p>어쩌구</p>
-
-      <h3>some-value</h3>
-      <div class="code-result">코드 결과</div>
-
-      <div class="important">추가 설명</div>
-
+      <div class="code-result">
+        <a href="#">앵커태그</a>, <a href="#">하이퍼링크</a>, ...
+      </div>
     </section>
   </article>
 </main>
@@ -53,5 +63,9 @@
 <footer>
   <a class="back-button" href="/pages">⬅ index로 돌아가기</a>
 </footer>
+<script>
+  let styles = window.getComputedStyle(document.querySelector('.main a'), '::before');
+  console.log(styles.content);
+</script>
 </body>
 </html>
