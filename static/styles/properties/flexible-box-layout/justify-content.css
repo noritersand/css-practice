@@ -62,32 +62,22 @@
     justify-content: stretch;
 }
 
-.flex-special-container {
-    display: flex;
-    gap: 10px;
-    width: 800px; /* 컨테이너 너비를 좁게 설정해 오버플로우 유도 */
-    border: 2px solid #333;
-    padding: 10px;
-    overflow-x: auto; /* 오버플로우 시 스크롤바 표시 */
-    margin-bottom: 20px;
-}
-
 .flex-special-item {
-    width: 100px; /* 아이템 크기 축소 */
+    width: 200px;
     height: 50px;
     background-color: #629d3c;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
     flex-shrink: 0; /* 아이템 크기 유지 */
 }
 
-.flex-special-container.safe {
+.flex-container.safe {
     justify-content: safe flex-end; /* safe: 오버플로우 방지 */
 }
 
-.flex-special-container.unsafe {
-    justify-content: unsafe center; /* unsafe: 정렬 강제 */
+.flex-container.unsafe {
+    justify-content: unsafe flex-end; /* unsafe: 정렬 강제 */
 }
