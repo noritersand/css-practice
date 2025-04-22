@@ -1,71 +1,93 @@
 .flex-container {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .flex-item {
-  width: 200px;
-  height: 50px;
-  background-color: #629d3c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 34px;
+    width: 200px;
+    height: 50px;
+    background-color: #629d3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 34px;
 }
 
 .flex-container.normal {
-  justify-content: normal;
+    justify-content: normal;
 }
 
 .flex-container.start {
-  justify-content: start;
+    justify-content: start;
 }
 
 .flex-container.end {
-  justify-content: end;
+    justify-content: end;
 }
 
 .flex-container.flex-start {
-  justify-content: flex-start;
+    justify-content: flex-start;
 }
 
 .flex-container.flex-end {
-  justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .flex-container.center {
-  justify-content: center;
+    justify-content: center;
 }
 
 .flex-container left {
-  justify-content: left;
+    justify-content: left;
 }
 
 .flex-container.right {
-  justify-content: right;
+    justify-content: right;
 }
 
 .flex-container.space-between {
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .flex-container.space-around {
-  justify-content: space-around;
+    justify-content: space-around;
 }
 
 .flex-container.space-evenly {
-  justify-content: space-evenly;
+    justify-content: space-evenly;
 }
 
 .flex-container.stretch {
-  justify-content: stretch;
+    justify-content: stretch;
 }
 
-.flex-container.safe {
-  justify-content: safe;
+.flex-special-container {
+    display: flex;
+    gap: 10px;
+    width: 800px; /* 컨테이너 너비를 좁게 설정해 오버플로우 유도 */
+    border: 2px solid #333;
+    padding: 10px;
+    overflow-x: auto; /* 오버플로우 시 스크롤바 표시 */
+    margin-bottom: 20px;
 }
 
-.flex-container.unsafe {
-  justify-content: unsafe;
+.flex-special-item {
+    width: 100px; /* 아이템 크기 축소 */
+    height: 50px;
+    background-color: #629d3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    flex-shrink: 0; /* 아이템 크기 유지 */
+}
+
+.flex-special-container.safe {
+    justify-content: safe flex-end; /* safe: 오버플로우 방지 */
+}
+
+.flex-special-container.unsafe {
+    justify-content: unsafe center; /* unsafe: 정렬 강제 */
 }

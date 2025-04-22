@@ -179,24 +179,38 @@
           </div>
 
           <h3>safe</h3>
+          <p>콘텐츠가 컨테이너의 경계를 벗어나지 않도록 보장한다. 즉, 콘텐츠가 오버플로우될 가능성이 있는 경우, 브라우저는 지정된 정렬 대신 안전한 대체 정렬을 선택해 콘텐츠가 잘리지 않고 보이도록 하는 값이다.</p>
+          <p>이 값은 단독으로 쓰면 안되고 다음 중 하나와 같이 써야 한다: flex-start, flex-end, center, start, end, left, right</p>
           <div class="code-result">
-            <div class="flex-container safe">
-              <div class="flex-item">1</div>
-              <div class="flex-item">2</div>
-              <div class="flex-item">3</div>
-              <div class="flex-item">4</div>
-              <div class="flex-item">5</div>
+            <div class="flex-special-container safe">
+              <div class="flex-special-item">1</div>
+              <div class="flex-special-item">2</div>
+              <div class="flex-special-item">3</div>
+              <div class="flex-special-item">4</div>
+              <div class="flex-special-item">5</div>
+              <div class="flex-special-item">6</div>
+              <div class="flex-special-item">7</div>
+              <div class="flex-special-item">8</div>
+              <div class="flex-special-item">9</div>
+              <div class="flex-special-item">10</div>
             </div>
           </div>
 
           <h3>unsafe</h3>
+          <p>safe와 반대로 지정된 정렬을 강제로 적용하며, 오버플로우가 발생하더라도 콘텐츠가 컨테이너 밖으로 넘치도록 허용한다.</p>
+          <p>이 값은 단독으로 쓰면 안되고 다음 중 하나와 같이 써야 한다: flex-start, flex-end, center, start, end, left, right</p>
           <div class="code-result">
-            <div class="flex-container unsafe">
-              <div class="flex-item">1</div>
-              <div class="flex-item">2</div>
-              <div class="flex-item">3</div>
-              <div class="flex-item">4</div>
-              <div class="flex-item">5</div>
+            <div class="flex-special-container unsafe">
+              <div class="flex-special-item">1</div>
+              <div class="flex-special-item">2</div>
+              <div class="flex-special-item">3</div>
+              <div class="flex-special-item">4</div>
+              <div class="flex-special-item">5</div>
+              <div class="flex-special-item">6</div>
+              <div class="flex-special-item">7</div>
+              <div class="flex-special-item">8</div>
+              <div class="flex-special-item">9</div>
+              <div class="flex-special-item">10</div>
             </div>
           </div>
 
@@ -209,3 +223,4 @@
     </footer>
   </body>
 </html>
+
