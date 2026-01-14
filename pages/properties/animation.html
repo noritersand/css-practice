@@ -59,47 +59,106 @@
         3s ease-out 5s slideout;
       --></code></pre>
           <div class="important">
-            <p>🚧 아직은 설명하기 너무 복잡해서 예시 하나만 작성하고 보류</p>
+            <p>🚧 아직은 설명하기 너무 복잡해서 예시만 작성하고 보류</p>
           </div>
         </section>
 
         <section>
-          <h2>예시 #1: 일출</h2>
+          <h2>fadeIn</h2>
           <div class="code-wrapper">
             <pre><code class="language-html"><!--
-        <div class="sun"></div>
-        --></code></pre>
+<script>
+function toggleActive() {
+  const fadeElements = document.querySelectorAll('.fade-in-me');
+  fadeElements.forEach(function(el) {
+    if (el.classList.contains('active')) {
+      el.classList.remove('active');
+    } else {
+      el.classList.add('active');
+    };
+  });
+}
+</script>
+<button class="buttons lightgray size-large" onclick="toggleActive()">눌러봐</button>
+<div class="fade-in-me blue active"></div>
+<div class="fade-in-me green"></div>
+            --></code></pre>
+            <pre><code class="language-css"><!--
+.fade-in-me.blue {
+  background-color: #2771c6;
+}
+
+.fade-in-me.green {
+  background-color: #488f31;
+}
+
+.fade-in-me {
+  height: 60px;
+  width: 180px;
+  display: none;
+}
+
+.fade-in-me.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* 살짝 위로 올라오는 효과 추가 가능 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+            --></code></pre>
+          </div>
+          <div class="code-result">
+            <script>
+            function toggleActive() {
+              const fadeElements = document.querySelectorAll('.fade-in-me');
+              fadeElements.forEach(function(el) {
+                if (el.classList.contains('active')) {
+                  el.classList.remove('active');
+                } else {
+                  el.classList.add('active');
+                };
+              });
+            }
+            </script>
+            <button class="buttons lightgray size-large" onclick="toggleActive()" style="margin-bottom: 10px">눌러봐</button>
+            <div class="fade-in-me blue active"></div>
+            <div class="fade-in-me green"></div>
           </div>
         </section>
 
         <section>
-          <h2>Syntax</h2>
+          <h2>sun-rise</h2>
+          <div class="code-wrapper">
+            <pre><code class="language-html"><!--
+<div class="sun"></div>
+        --></code></pre>
             <pre><code class="language-css"><!--
-        :root {
-          overflow: hidden; /* hides any part of the sun below the horizon */
-          background-color: lightblue;
-          display: flex;
-          justify-content: center; /* centers the sun in the background */
-        }
+.sun {
+  background-color: yellow;
+  border-radius: 50%; /* creates a circular background */
+  height: 100vh; /* makes the sun the size of the viewport */
+  aspect-ratio: 1 / 1;
+  animation: 4s linear 0s infinite alternate sun-rise;
+}
 
-        .sun {
-          background-color: yellow;
-          border-radius: 50%; /* creates a circular background */
-          height: 100vh; /* makes the sun the size of the viewport */
-          aspect-ratio: 1 / 1;
-          animation: 4s linear 0s infinite alternate sun-rise;
-        }
-
-        @keyframes sun-rise {
-          from {
-            /* pushes the sun down past the viewport */
-            transform: translateY(110vh);
-          }
-          to {
-            /* returns the sun to its default position */
-            transform: translateY(0);
-          }
-        }
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateY(110vh);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateY(0);
+  }
+}
         --></code></pre>
           </div>
           <div class="code-result">

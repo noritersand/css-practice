@@ -1,9 +1,32 @@
-/*:root {*/
-/*    overflow: hidden; !* hides any part of the sun below the horizon *!*/
-/*    background-color: lightblue;*/
-/*    display: flex;*/
-/*    justify-content: center; !* centers the sun in the background *!*/
-/*}*/
+.fade-in-me.blue {
+  background-color: #2771c6;
+}
+
+.fade-in-me.green {
+  background-color: #488f31;
+}
+
+.fade-in-me {
+  height: 60px;
+  width: 180px;
+  display: none;
+}
+
+.fade-in-me.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* 살짝 위로 올라오는 효과 추가 가능 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .sun {
   background-color: yellow;
