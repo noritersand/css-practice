@@ -69,7 +69,7 @@
             <pre><code class="language-html"><!--
 <script>
 function toggleActive() {
-  const fadeElements = document.querySelectorAll('.fade-in-me');
+  const fadeElements = document.querySelectorAll('.fade-in-box');
   fadeElements.forEach(function(el) {
     if (el.classList.contains('active')) {
       el.classList.remove('active');
@@ -80,25 +80,25 @@ function toggleActive() {
 }
 </script>
 <button class="buttons lightgray size-large" onclick="toggleActive()">눌러봐</button>
-<div class="fade-in-me blue active"></div>
-<div class="fade-in-me green"></div>
+<div class="fade-in-box blue active"></div>
+<div class="fade-in-box green"></div>
             --></code></pre>
             <pre><code class="language-css"><!--
-.fade-in-me.blue {
+.fade-in-box.blue {
   background-color: #2771c6;
 }
 
-.fade-in-me.green {
+.fade-in-box.green {
   background-color: #488f31;
 }
 
-.fade-in-me {
+.fade-in-box {
   height: 60px;
   width: 180px;
   display: none;
 }
 
-.fade-in-me.active {
+.fade-in-box.active {
   display: block;
   animation: fadeIn 0.3s ease-in-out forwards;
 }
@@ -118,7 +118,7 @@ function toggleActive() {
           <div class="code-result">
             <script>
             function toggleActive() {
-              const fadeElements = document.querySelectorAll('.fade-in-me');
+              const fadeElements = document.querySelectorAll('.fade-in-box');
               fadeElements.forEach(function(el) {
                 if (el.classList.contains('active')) {
                   el.classList.remove('active');
@@ -129,8 +129,8 @@ function toggleActive() {
             }
             </script>
             <button class="buttons lightgray size-large" onclick="toggleActive()" style="margin-bottom: 10px">눌러봐</button>
-            <div class="fade-in-me blue active"></div>
-            <div class="fade-in-me green"></div>
+            <div class="fade-in-box blue active"></div>
+            <div class="fade-in-box green"></div>
           </div>
         </section>
 

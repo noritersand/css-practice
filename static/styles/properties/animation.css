@@ -1,18 +1,18 @@
-.fade-in-me.blue {
+.fade-in-box.blue {
   background-color: #2771c6;
 }
 
-.fade-in-me.green {
+.fade-in-box.green {
   background-color: #488f31;
 }
 
-.fade-in-me {
+.fade-in-box {
   height: 60px;
   width: 180px;
   display: none;
 }
 
-.fade-in-me.active {
+.fade-in-box.active {
   display: block;
   animation: fadeIn 0.3s ease-in-out forwards;
 }
