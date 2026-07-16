@@ -3,6 +3,7 @@
 ## 서버 실행
 
 ```bash
+'' > yarn.lock
 yarn install
 yarn live
 ```
