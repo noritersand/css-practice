@@ -1,6 +1,6 @@
 # css-practice
 
-CSS 테스트용 저장소. CSS 작성하기 귀찮아서 중간에 SASS로 바꿨음.
+CSS 테스트용 저장소. CSS 작성하기 귀찮아서 중간에 Sass로 바꿨음.
 
 ## 실행 방법
 
