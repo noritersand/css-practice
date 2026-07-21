@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>align-content</title>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="page.css" />
+  <script src="/lib/prism/prism.js"></script>
+  <script type="module" src="/scripts/fire-when-ready.js"></script>
+</head>
+<body>
+<header>
+  <nav></nav>
+</header>
+
+<main>
+  <article>
+    <h1>align-content</h1>
+
+    <section>
+      <div id="toc"></div>
+    </section>
+
+    <section>
+      <h2>개요</h2>
+      <p>
+        align-content는 플렉스박스나 그리드 레이아웃에서 여러 줄로 나뉜 콘텐츠 간의 간격을
+        교차축 방향으로 정렬할 때 사용하는 프로퍼티다.
+      </p>
+      <p>
+        🚨 이 프로퍼티는 한 줄로 이뤄진 플렉스 컨테이너(flex-wrap: nowrap일 때)에는 아무런 효과가
+        없다.
+        ⚠️️ 브라우저로 확인할 때는 1411px 이상의 너비로 볼 것
+      </p>
+      <p></p>
+    </section>
+
+    <section>
+      <h2>Syntax</h2>
+      <pre><code class="language-css"><!--
+        /* Basic keywords */
+        align-items: normal;
+        align-items: stretch;
+
+        /* Positional alignment */
+        /* align-items does not take left and right values */
+        align-items: center;
+        align-items: start;
+        align-items: end;
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: self-start;
+        align-items: self-end;
+        align-items: anchor-center;
+
+        /* Baseline alignment */
+        align-items: baseline;
+        align-items: first baseline;
+        align-items: last baseline;
+
+        /* Overflow alignment (for positional alignment only) */
+        align-items: safe center;
+        align-items: unsafe center;
+
+        /* Global values */
+        align-items: inherit;
+        align-items: initial;
+        align-items: revert;
+        align-items: revert-layer;
+        align-items: unset;
+      --></code></pre>
+    </section>
+
+    <section>
+      <h2>Values</h2>
+
+      <h3>normal</h3>
+      <p>기본값. </p>
+      <div class="code-result">
+        <div class="flex-container normal">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>start</h3>
+      <div class="code-result">
+        <div class="flex-container start">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>⭐center</h3>
+      <div class="code-result">
+        <div class="flex-container center">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>end</h3>
+      <div class="code-result">
+        <div class="flex-container end">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>⭐flex-start</h3>
+      <div class="code-result">
+        <div class="flex-container flex-start">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>⭐flex-end</h3>
+      <div class="code-result">
+        <div class="flex-container flex-end">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>baseline</h3>
+      <div class="code-result">
+        <div class="flex-container baseline">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>first-baseline</h3>
+      <div class="code-result">
+        <div class="flex-container first-baseline">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>last-baseline</h3>
+      <div class="code-result">
+        <div class="flex-container last-baseline">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>⭐space-between</h3>
+      <div class="code-result">
+        <div class="flex-container space-between">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>⭐space-around</h3>
+      <div class="code-result">
+        <div class="flex-container space-around">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>⭐space-evenly</h3>
+      <div class="code-result">
+        <div class="flex-container space-evenly">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>⭐stretch</h3>
+      <div class="code-result">
+        <div class="flex-container stretch">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>safe</h3>
+      <div class="code-result">
+        <div class="flex-container safe">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+
+      <h3>unsafe</h3>
+      <div class="code-result">
+        <div class="flex-container unsafe">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <a class="back-button" href="/pages">⬅ pages로 돌아가기</a>
+</footer>
+</body>
+</html>

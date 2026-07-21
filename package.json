@@ -4,17 +4,19 @@
   "description": "CSS practice project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "live": "live-server"
+    "sass:build": "sass src/styles:public/pages",
+    "sass:watch": "sass --watch src/styles:public/pages",
+    "live": "live-server public",
+    "dev": "concurrently 'yarn sass:watch' 'yarn live'"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "prettier": "^3.3.3"
-  },
-  "dependencies": {
-    "live-server": "^1.2.2"
-  },
   "type": "module",
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "live-server": "^1.2.2",
+    "repomix": "^1.16.1",
+    "sass": "^1.101.0"
+  },
   "packageManager": "yarn@4.17.1"
 }

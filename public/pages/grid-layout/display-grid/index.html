@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>display: grid</title>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="page.css" />
+  <script src="/lib/prism/prism.js"></script>
+  <script type="module" src="/scripts/fire-when-ready.js"></script>
+</head>
+<body>
+<header>
+  <nav></nav>
+</header>
+<main>
+  <article>
+    <h1>display: grid</h1>
+
+    <section>
+      <div id="toc"></div>
+    </section>
+
+    <section>
+      <h2>개요</h2>
+      <p>
+        display: grid는 CSS 그리드 레이아웃(grid layout) 모듈을 활성화하는 프로퍼티로, 그리드
+        레이아웃은 엘리먼트들을 2차원 그리드로 배치하는 데 사용한다.
+      </p>
+      <p>
+        플렉스박스보다 제공되는 기능이 더 많고 강력하다.
+        <del>플렉스박스가 그냥 커피면 그리드는 티오피</del>
+      </p>
+      <div class="code-wrapper">
+            <pre><code class="language-css"><!--
+            .container {
+              display: grid;
+              grid-template-columns: 100px 200px;
+              grid-template-rows: 200px 100px;
+              grid-gap: 10px;
+            }
+            --></code></pre>
+        <pre><code class="language-html"><!--
+            <div class="container">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+              <div class="item">4</div>
+            </div>
+            --></code></pre>
+      </div>
+      <div class="code-result">
+        <div class="container">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</main>
+<footer>
+  <a class="back-button" href="/pages">⬅ pages로 돌아가기</a>
+</footer>
+</body>
+</html>

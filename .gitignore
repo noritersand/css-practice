@@ -10,3 +10,7 @@ yarn.lock
 .yarn
 .pnp.cjs
 .pnp.loader.mjs
+
+# sass
+public/pages/**/*.css
+public/pages/**/*.css.map
