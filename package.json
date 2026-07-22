@@ -4,8 +4,8 @@
   "description": "CSS practice project",
   "main": "index.js",
   "scripts": {
-    "sass:build": "sass src/styles:public/pages",
-    "sass:watch": "sass --watch src/styles:public/pages",
+    "sass:build": "sass src:public",
+    "sass:watch": "sass --watch src:public",
     "live": "live-server public",
     "dev": "concurrently 'yarn sass:watch' 'yarn live'"
   },
