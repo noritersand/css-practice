@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>grid</title>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="page.css" />
+  <script src="/lib/prism/prism.js"></script>
+  <script type="module" src="/scripts/fire-when-ready.js"></script>
+</head>
+<body>
+<header>
+  <nav></nav>
+</header>
+
+<main>
+  <article>
+    <h1>grid</h1>
+
+    <section>
+      <div id="toc"></div>
+    </section>
+
+    <section>
+      <h2>개요</h2>
+      <p>어쩌구</p>
+    </section>
+
+    <section>
+      <h2>Syntax</h2>
+      <pre><code class="language-css"><!--
+/* <'grid-template'> values */
+grid: none;
+grid: "a" 100px "b" 1fr;
+grid: [line-name1] "a" 100px [line-name2];
+grid: "a" 200px "b" min-content;
+grid: "a" minmax(100px, max-content) "b" 20%;
+grid: 100px / 200px;
+grid: minmax(400px, min-content) / repeat(auto-fill, 50px);
+
+/* <'grid-template-rows'> /
+[ auto-flow && dense? ] <'grid-auto-columns'>? values */
+grid: 200px / auto-flow;
+grid: 30% / auto-flow dense;
+grid: repeat(3, 200px) / auto-flow 300px;
+grid: [line1] minmax(20em, max-content) / auto-flow dense 40%;
+
+/* [ auto-flow && dense? ] <'grid-auto-rows'>? /
+<'grid-template-columns'> values */
+grid: auto-flow / 200px;
+grid: auto-flow dense / 30%;
+grid: auto-flow 300px / repeat(3, 200px);
+grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
+
+/* Global values */
+grid: inherit;
+grid: initial;
+grid: revert;
+grid: revert-layer;
+grid: unset;
+      --></code></pre>
+    </section>
+
+    <section>
+      <h2>Values</h2>
+      <p>어쩌구</p>
+
+      <h3>some-value</h3>
+
+      <div class="code-result">코드 결과</div>
+
+      <div class="important">추가 설명</div>
+
+    </section>
+  </article>
+</main>
+
+<footer>
+  <a class="back-button" href="/pages">⬅ pages로 돌아가기</a>
+</footer>
+</body>
+</html>
