@@ -12,5 +12,5 @@ yarn.lock
 .pnp.loader.mjs
 
 # sass
-public/pages/**/*.css
-public/pages/**/*.css.map
+public/{styles,pages}/**/*.css
+public/{styles,pages}/**/*.css.map
