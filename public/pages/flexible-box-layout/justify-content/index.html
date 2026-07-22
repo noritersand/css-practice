@@ -52,11 +52,64 @@
         </div>
       </div>
 
+      <h3>flex-start</h3>
+      <p>플랙스 컨테이너의 시작 부분에 붙여서 정렬한다.</p>
+      <div class="code-result">
+        <div class="flex-container flex-start">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+        </div>
+      </div>
+
+      <h3>row-reverse + flex-start</h3>
+      <p>flex-direction이 row-reverse일 때는 flex-start가 오른쪽 정렬을 의미한다.</p>
+      <div class="code-result">
+        <div class="flex-container row-reverse-flex-start">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+      </div>
+
+      <h3>flex-end</h3>
+      <p>플랙스 컨테이너의 끝 부분에 붙여서 정렬한다.</p>
+      <div class="code-result">
+        <div class="flex-container flex-end">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+        </div>
+      </div>
+
+      <h3>row-reverse + flex-end</h3>
+      <p>flex-direction이 row-reverse일 때는 flex-end가 왼쪽 정렬을 의미한다.</p>
+      <div class="code-result">
+        <div class="flex-container row-reverse-flex-end">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+      </div>
+
+      <h3>center</h3>
+      <p>아이템을 메인 축 중앙에 모아서 정렬한다.</p>
+      <div class="code-result">
+        <div class="flex-container center">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+        </div>
+      </div>
+
       <h3>start</h3>
-      <p>항목들은 정렬 컨테이너 메인 축의 시작 가장자리를 향해 packed flush 된다. (
-        <del>뭔소리야야발</del>
-        )
-      </p>
+      <p>현재 문서의 글쓰기 방향(LTR, RTL)에 따라 논리적 시작 지점에 플랙스 아이템을 정렬한다. flex-direction은 무시한다.</p>
       <div class="code-result">
         <div class="flex-container start">
           <div class="flex-item">1</div>
@@ -68,7 +121,7 @@
       </div>
 
       <h3>end</h3>
-      <p>start와 같지만 반대 방향으로 작동함.</p>
+      <p>현재 문서의 글쓰기 방향(LTR, RTL)에 따라 논리적 끝 지점에 플랙스 아이템을 정렬한다. flex-direction은 무시한다.</p>
       <div class="code-result">
         <div class="flex-container end">
           <div class="flex-item">1</div>
@@ -79,40 +132,8 @@
         </div>
       </div>
 
-      <h3>⭐flex-start</h3>
-      <div class="code-result">
-        <div class="flex-container flex-start">
-          <div class="flex-item">1</div>
-          <div class="flex-item">2</div>
-          <div class="flex-item">3</div>
-          <div class="flex-item">4</div>
-          <div class="flex-item">5</div>
-        </div>
-      </div>
-
-      <h3>⭐flex-end</h3>
-      <div class="code-result">
-        <div class="flex-container flex-end">
-          <div class="flex-item">1</div>
-          <div class="flex-item">2</div>
-          <div class="flex-item">3</div>
-          <div class="flex-item">4</div>
-          <div class="flex-item">5</div>
-        </div>
-      </div>
-
-      <h3>⭐center</h3>
-      <div class="code-result">
-        <div class="flex-container center">
-          <div class="flex-item">1</div>
-          <div class="flex-item">2</div>
-          <div class="flex-item">3</div>
-          <div class="flex-item">4</div>
-          <div class="flex-item">5</div>
-        </div>
-      </div>
-
       <h3>left</h3>
+      <p>글쓰기 방향이나 flex-direction을 무시하고 아이템을 왼쪽으로 정렬한다.</p>
       <div class="code-result">
         <div class="flex-container left">
           <div class="flex-item">1</div>
@@ -124,6 +145,7 @@
       </div>
 
       <h3>right</h3>
+      <p>글쓰기 방향이나 flex-direction을 무시하고 아이템을 오른쪽으로 정렬한다.</p>
       <div class="code-result">
         <div class="flex-container right">
           <div class="flex-item">1</div>
@@ -134,7 +156,8 @@
         </div>
       </div>
 
-      <h3>⭐space-between</h3>
+      <h3>space-between</h3>
+      <p>첫 번째 아이템은 시작점에, 마지막 아이템은 끝점에 붙이고, 남은 여백을 아이템 사이 사이에 균등하게 배분한다.</p>
       <div class="code-result">
         <div class="flex-container space-between">
           <div class="flex-item">1</div>
@@ -145,7 +168,8 @@
         </div>
       </div>
 
-      <h3>⭐space-around</h3>
+      <h3>space-around</h3>
+      <p>각 아이템의 양옆에 같은 너비의 여백을 부여한다. 여백은 상쇄되지 않는다.</p>
       <div class="code-result">
         <div class="flex-container space-around">
           <div class="flex-item">1</div>
@@ -156,7 +180,8 @@
         </div>
       </div>
 
-      <h3>⭐space-evenly</h3>
+      <h3>space-evenly</h3>
+      <p>모든 여백을 완전히 동일하게 배분한다. margin처럼 정해진 간격을 확보하는 개념이다.</p>
       <div class="code-result">
         <div class="flex-container space-evenly">
           <div class="flex-item">1</div>
@@ -167,14 +192,16 @@
         </div>
       </div>
 
-      <h3>⭐stretch</h3>
+      <h3>stretch</h3>
+      <p>메인 축 방향으로 아이템의 크기를 늘려 컨테이너를 채운다. 아이템의 크기가 고정 크기인 경우 늘어나지 않는다.</p>
+      <p>⛔ stretch의 자동 크기 조절 기능은 Grid Layout 내에서만 적용된다. Flexible Box Layout에선 flex-grow가 크기 조절을 담당하며, stretch는 flex-start와 동일하게 작동한다.</p>
       <div class="code-result">
         <div class="flex-container stretch">
-          <div class="flex-item">1</div>
-          <div class="flex-item">2</div>
-          <div class="flex-item">3</div>
-          <div class="flex-item">4</div>
-          <div class="flex-item">5</div>
+          <div class="flex-stretch-item">1</div>
+          <div class="flex-stretch-item">2</div>
+          <div class="flex-stretch-item">3</div>
+          <div class="flex-stretch-item">4</div>
+          <div class="flex-stretch-item">5</div>
         </div>
       </div>
 
@@ -236,6 +263,7 @@
       </div>
 
     </section>
+
   </article>
 </main>
 

@@ -3,9 +3,13 @@
 .flex-container
   display: flex
   gap: 10px
+  background-color: lightgray
+  padding: 10px
+  width: 1000px
+  //height: 300px
 
 .flex-item
-  width: 200px
+  width: 100px
   height: 50px
   background-color: #629d3c
   display: flex
@@ -32,7 +36,7 @@
 .flex-container.center
   justify-content: center
 
-.flex-container left
+.flex-container.left
   justify-content: left
 
 .flex-container.right
@@ -50,8 +54,18 @@
 .flex-container.stretch
   justify-content: stretch
 
+.flex-stretch-item
+  width: auto
+  height: auto
+  background-color: #629d3c
+  display: flex
+  justify-content: center
+  align-items: center
+  color: white
+  font-size: 34px
+
 .flex-special-item
-  width: 200px
+  width: 100px
   height: 50px
   background-color: #629d3c
   display: flex
@@ -60,7 +74,6 @@
   color: white
   font-size: 34px
   flex-shrink: 0
-/* ?꾩씠???ш린 ?좎? */
 
 .flex-container.safe
   justify-content: safe flex-end
@@ -69,4 +82,12 @@
 .flex-container.unsafe
   justify-content: unsafe flex-end
 // unsafe: 정렬 강제
+
+.flex-container.row-reverse-flex-start
+  flex-direction: row-reverse
+  justify-content: flex-start
+
+.flex-container.row-reverse-flex-end
+  flex-direction: row-reverse
+  justify-content: flex-end
 
