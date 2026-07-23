@@ -1,4 +1,47 @@
 ﻿@use '../../../styles/global'
 
+.item
+  background-color: seagreen
+  display: flex
+  justify-content: center
+  align-items: center
+  font: 30px bold
+  color: white
+
 .container
   display: grid
+  background-color: moccasin
+  gap: 10px
+  max-width: 600px
+  height: 200px
+
+  &.ex01
+    grid-template-columns: 100px 150px 200px
+
+  &.ex02
+    grid-template-columns: 1fr 2fr 3fr
+
+  &.ex03
+    grid-template-columns: repeat(2, 150px)
+
+  &.ex04
+    grid-template-columns: repeat(3, 1fr)
+
+  &.ex05
+    grid-template-columns: 50px auto 50px
+
+  &.ex06
+    grid-template-columns: minmax(10px, 1fr) minmax(50px, 1fr) minmax(200px, 1fr)
+
+  &.ex07
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr))
+    
+  &.ex08
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+    
+  &.ex09
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr))
+    
+  &.ex10
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+

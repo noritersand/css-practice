@@ -24,57 +24,182 @@
 
     <section>
       <h2>개요</h2>
-      <p>어쩌구</p>
+      <p>grid-template-rows는 행의 개수와 높이를 정의할 때 사용한다.</p>
+      <p>Grid 컨테이너에 직접 지정하며, 기본값은 none이다.</p>
     </section>
 
     <section>
       <h2>Syntax</h2>
       <pre><code class="language-css"><!--
-/* Keyword value */
-grid-template-rows: none;
+      /* Keyword value */
+      grid-template-rows: none;
 
-/* <track-list> values */
-grid-template-rows: 100px 1fr;
-grid-template-rows: [line-name] 100px;
-grid-template-rows: [line-name1] 100px [line-name2 line-name3];
-grid-template-rows: minmax(100px, 1fr);
-grid-template-rows: fit-content(40%);
-grid-template-rows: repeat(3, 200px);
-grid-template-rows: subgrid;
-grid-template-rows: masonry;
+      /* <track-list> values */
+      grid-template-rows: 100px 1fr;
+      grid-template-rows: [line-name] 100px;
+      grid-template-rows: [line-name1] 100px [line-name2 line-name3];
+      grid-template-rows: minmax(100px, 1fr);
+      grid-template-rows: fit-content(40%);
+      grid-template-rows: repeat(3, 200px);
+      grid-template-rows: subgrid;
+      grid-template-rows: masonry;
 
-/* <auto-track-list> values */
-grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-grid-template-rows:
-  minmax(100px, max-content)
-  repeat(auto-fill, 200px) 20%;
-grid-template-rows:
-  [line-name1] 100px [line-name2]
-  repeat(auto-fit, [line-name3 line-name4] 300px)
-  100px;
-grid-template-rows:
-  [line-name1 line-name2] 100px
-  repeat(auto-fit, [line-name1] 300px) [line-name3];
+      /* <auto-track-list> values */
+      grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
+      grid-template-rows:
+        minmax(100px, max-content)
+        repeat(auto-fill, 200px) 20%;
+      grid-template-rows:
+        [line-name1] 100px [line-name2]
+        repeat(auto-fit, [line-name3 line-name4] 300px)
+        100px;
+      grid-template-rows:
+        [line-name1 line-name2] 100px
+        repeat(auto-fit, [line-name1] 300px) [line-name3];
 
-/* Global values */
-grid-template-rows: inherit;
-grid-template-rows: initial;
-grid-template-rows: revert;
-grid-template-rows: revert-layer;
-grid-template-rows: unset;
+      /* Global values */
+      grid-template-rows: inherit;
+      grid-template-rows: initial;
+      grid-template-rows: revert;
+      grid-template-rows: revert-layer;
+      grid-template-rows: unset;
       --></code></pre>
     </section>
 
     <section>
       <h2>Values</h2>
-      <p>어쩌구</p>
+      <p>grid-template-rows는 특수한 경우가 아니면 보통 grid-template-columns와 같이 사용한다.</p>
+      <p>grid-template-rows만 단독으로 지정하면 명시적 행의 개수와 높이만 정해지고, 열의 크기는 지정하지 않은 상태가 된다. 자동 배치 과정에서 필요한 암시적 열의 너비는 기본적으로 auto로
+        처리된다.</p>
+      <h3>px</h3>
+      <p>행의 높이를 고정 수치로 지정하는 방식.</p>
+      <pre><code class="language-css"><!--
+      min-height: 200px
+      grid-template-rows: 40px 80px 40px
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex01">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
 
-      <h3>some-value</h3>
+      <h3>fr</h3>
+      <p>행 트랙이 차지할 높이를 비율로 지정하는 방식</p>
+      <p>fr은 Grid Layout에서만 쓰이는 특수한 단위로, Grid 컨테이너 내부에서 고정 크기를 가진 요소들을 제외한 남은 공간(leftover space) 중 Grid Track이 차지할
+        비율을 나타내는 값이다.</p>
+      <pre><code class="language-css"><!--
+      min-height: 200px
+      grid-template-rows: 1fr 2fr 3fr
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex02">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
 
-      <div class="code-result">코드 결과</div>
+      <h3>repeat()</h3>
+      <p>동일한 높이의 행을 반복 지정할 때 사용한다. 첫 번째 인수는 반복 횟수, 두 번째 인수는 반복할 행 높이를 의미한다.</p>
+      <pre><code class="language-css"><!--
+      min-height: 200px
+      grid-template-rows: repeat(2, 80px)
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex03">
+          <div class="item">1</div>
+          <div class="item">2</div>
+        </div>
+      </div>
+      <pre><code class="language-css"><!--
+      min-height: 200px
+      grid-template-rows: repeat(3, 1fr)
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex04">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
 
-      <div class="important">추가 설명</div>
+      <h3>auto</h3>
+      <p>auto는 콘텐츠 크기를 기준으로 행의 높이를 자동으로 결정한다. 컨테이너에 여유 공간이 있으면 정렬/트랙 크기 계산에 따라 늘어날 수 있다.</p>
+      <pre><code class="language-css"><!--
+      min-height: 200px
+      grid-template-rows: 50px auto 50px
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex05">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
 
+      <h3>minmax()</h3>
+      <p>행의 최소 높이와 최대 높이를 범위로 지정한다. 첫 번째 인수가 최소 높이, 두 번째 인수가 최대 높이다.</p>
+      <p>이 값을 지정하면 컨테이너의 높이 변화에 따라 행 트랙의 높이가 지정한 범위 안에서 커지거나 줄어든다.</p>
+      <pre><code class="language-css"><!--
+      min-height: 200px
+      grid-template-rows: minmax(10px, 30px) minmax(50px, 80px) minmax(10px, 100px)
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex06">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
+
+      <h3>auto-fill, auto-fit</h3>
+      <p>컨테이너의 높이에 따라 행의 개수를 자동으로 줄이거나 늘린다.</p>
+      <p>auto-fill과 auto-fit은 컨테이너에 공간이 남을 때 차이가 발생한다. auto-fill은 빈 행 공간을 그대로 유지하지만, auto-fit은 빈 행을 축소시켜 기존 행들이 남은 공간을
+        넓게 나누어 갖도록 처리한다.</p>
+      <p>가령 높이 1000px의 컨테이너에 아이템이 2개고 다음처럼 지정했을 때:</p>
+      <pre><code class="language-css"><!--
+      grid-template-rows: repeat(auto-fit, minmax(200px, 1fr))
+      /*or*/
+      grid-template-rows: repeat(auto-fill, minmax(200px, 1fr))
+      --></code></pre>
+      <p>auto-fill은</p>
+      <ul>
+        <li>gap이 없다고 가정할 때, 컨테이너에 200px짜리 행이 최대 5개 들어갈 수 있음을 계산한다.</li>
+        <li>아이템 2개를 첫 번째, 두 번째 행에 넣고 남은 3개 공간을 빈 행으로 계속 유지한다.</li>
+        <li>5개의 행이 컨테이너 높이를 나누어 가지므로 각 행은 약 200px 높이가 되고, 아이템은 위쪽 행에만 배치된다.</li>
+      </ul>
+      <p>auto-fit</p>
+      <ul>
+        <li>똑같이 gap이 없다고 가정하고, 5개의 행 공간을 계산하지만, 아이템이 들어가지 않은 빈 행 3개의 높이를 0px로 축소시킨다.</li>
+        <li>남은 3개 행이 사라졌으므로, 실제 존재하는 2개의 아이템이 남은 1000px 공간을 1fr : 1fr 비율로 500px씩 나누어 가진다.</li>
+      </ul>
+      <p>⚠️ 이 값들은 repeat() 내부에서만 유효하다.</p>
+      <pre><code class="language-css"><!--
+      height: 400px
+      grid-template-rows: repeat(auto-fill, minmax(50px, 1fr))
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex07">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+        </div>
+      </div>
+      <pre><code class="language-css"><!--
+      height: 400px
+      grid-template-rows: repeat(auto-fit, minmax(50px, 1fr))
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex09">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
     </section>
   </article>
 </main>
@@ -84,3 +209,6 @@ grid-template-rows: unset;
 </footer>
 </body>
 </html>
+
+
+

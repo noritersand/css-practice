@@ -41,28 +41,28 @@
         같은 양의 실수도 가능. 기본값은 1이다.
       </p>
       <div class="code-wrapper">
-            <pre><code class="language-css"><!--
-            .item:nth-of-type(1) {
-              flex-shrink: 1;
-            }
-            .item:nth-of-type(2) {
-              flex-shrink: 1.5;
-            }
-            .item:nth-of-type(3) {
-              flex-shrink: 3;
-            }
-            .item:nth-of-type(4) {
-              flex-shrink: 4.5;
-            }
-            --></code></pre>
+        <pre><code class="language-css"><!--
+        .item:nth-of-type(1) {
+          flex-shrink: 1;
+        }
+        .item:nth-of-type(2) {
+          flex-shrink: 1.5;
+        }
+        .item:nth-of-type(3) {
+          flex-shrink: 3;
+        }
+        .item:nth-of-type(4) {
+          flex-shrink: 4.5;
+        }
+        --></code></pre>
         <pre><code class="language-html"><!--
-            <div class="container">
-              <div class="item">1</div>
-              <div class="item">2</div>
-              <div class="item">3</div>
-              <div class="item">4</div>
-            </div>
-            --></code></pre>
+        <div class="container">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+        --></code></pre>
       </div>
       <div class="code-result">
         <div class="container">
@@ -120,22 +120,22 @@
         아래의 예시에서 두 플렉스 아이템에 화면 너비보다 큰 값을 동일하게 width로 지정했지만 flex-shrink 값이 더 큰쪽이 더 많이 줄어든 것을 확인할 수 있다.
       </p>
       <div class="code-wrapper">
-            <pre><code class="language-css"><!--
-              .item.with-width1 {
-                width: 1200px;
-                flex-shrink: 1;
-              }
-              .item.with-width2 {
-                width: 1200px;
-                flex-shrink: 3;
-              }
-            --></code></pre>
+        <pre><code class="language-css"><!--
+          .item.with-width1 {
+            width: 1200px;
+            flex-shrink: 1;
+          }
+          .item.with-width2 {
+            width: 1200px;
+            flex-shrink: 3;
+          }
+        --></code></pre>
         <pre><code class="language-html"><!--
-              <div class="container">
-                <div class="item with-width1">1</div>
-                <div class="item with-width2">2</div>
-              </div>
-            --></code></pre>
+          <div class="container">
+            <div class="item with-width1">1</div>
+            <div class="item with-width2">2</div>
+          </div>
+        --></code></pre>
       </div>
       <div class="code-result">
         <div class="container">
