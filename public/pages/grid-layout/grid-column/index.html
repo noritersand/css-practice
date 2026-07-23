@@ -116,20 +116,22 @@
       <p>슬래시가 없으면 grid-column-end가 auto로 설정되는데, 아이템은 지정한 start 라인에서 시작하여 auto에 의해 1개 트랙(1칸)만 차지하는 위치로 end 라인이 자동 설정된다.</p>
       <pre><code class="language-css"><!--
       grid-column: 1
+      /*같음*/
+      grid-column: 1 / auto
       --></code></pre>
       <div class="code-result">
         <div class="container ex011">
           <div class="item item1">1</div>
           <div class="item item2">2</div>
           <div class="item item3">3</div>
-          <div class="item item3">4</div>
-          <div class="item item3">5</div>
-          <div class="item item3">6</div>
         </div>
       </div>
 
+      <p>grid-column의 값이 span부터 시작하면 grid-column-start가 auto로 설정된다.</p>
       <p>grid-column-start가 auto이고 end가 span인 경우, start가 빈 공간을 찾아 들어가되, 지정한 span 수만큼의 트랙을 연속으로 차지한다.</p>
       <pre><code class="language-css"><!--
+      grid-column: span 3
+      /*같음*/
       grid-column: auto / span 3
       --></code></pre>
       <div class="code-result">
