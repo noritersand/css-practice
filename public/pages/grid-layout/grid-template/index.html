@@ -24,8 +24,12 @@
 
     <section>
       <h2>개요</h2>
-      <p>grid-template은 grid-template-rows, grid-template-columns, grid-template-areas를 한 번에 설정하는 단축 프로퍼티다.</p>
-      <p>Grid 컨테이너에 직접 지정하며, 기본값은 none이다.</p>
+      <p>grid-template은 grid-template-areas, grid-template-rows, grid-template-columns를 한 번에 설정하는 단축 프로퍼티다.</p>
+      <pre><code class="language-css"><!--
+      grid-template: grid-template-areas grid-template-rows / grid-template-columns
+      --></code></pre>
+      <p>슬래시를 기준으로 좌측이 grid-template-areas와 grid-template-rows, 우측이 grid-template-columns로 해석된다.</p>
+      <p>그리드 컨테이너에 지정하며, 기본값은 none이다.</p>
       <p>프로퍼티별 특성은 각 페이지를 확인할 것.</p>
     </section>
 

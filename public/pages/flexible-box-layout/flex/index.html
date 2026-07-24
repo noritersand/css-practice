@@ -24,8 +24,13 @@
 
     <section>
       <h2>개요</h2>
-      <p>flex는 flex-grow, flex-shrink, flex-basis를 결합한 단축 프로퍼티다.</p>
-      <p>🚨이 프로퍼티는 플렉스 컨테이너가 아니라 플렉스 아이템에 지정한다.</p>
+      <p>flex는 아이템이 컨테이너의 남은 공간에 맞게 어떻게 늘어나거나 줄어드는지를 설정하는 단축 프로퍼티다.</p>
+      <pre><code class="language-css"><!--
+      flex: flex-grow flex-shrink flex-basis
+      --></code></pre>
+      <p>flex-grow, flex-shrink, flex-basis를 한 번에 설정하며 각 프로퍼티는 공백으로 구분한다.</p>
+      <p>이 프로퍼티는 플렉스 아이템에 직접 지정한다.</p>
+      <p>flex의 기본값은 <code class="language-js">0 1 auto</code>다.</p>
     </section>
 
     <section>
@@ -64,7 +69,6 @@
 
     <section>
       <h2>Values</h2>
-      <p>flex의 기본값은 <code class="language-js">0 1 auto</code>다. (flex-gorw, flex-shrink, flex-basis 순)</p>
 
       <h3>One value</h3>
       <p>값이 하나일 때는 flex-grow 혹은 flex-basis다. 단위가 없는 숫자로 지정하면 flex-grow로 인식하며 flex-shrink는 1, flex-basis는 0%로 지정된다. 단위가

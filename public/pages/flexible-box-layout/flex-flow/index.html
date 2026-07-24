@@ -24,11 +24,13 @@
 
     <section>
       <h2>개요</h2>
-      <p>flex-flow는 flex-direction과 flex-wrap을 한 번에 설정할 수 있는 단축 프로퍼티다.</p>
-      <p>
-        값의 구분은 공백으로 한다. flex-direction이나 flex-wrap 단독으로 써도 알아서 인식한다.
-        같이 쓰는 경우 첫 번째 자리에 flow-direction을, 두 번째 자리에 flow-wrap의 값을 쓴다.
-      </p>
+      <p>flex-flow는 Flexbox 컨테이너에서 아이템들이 배치되는 방향과 줄바꿈을 설정하는 단축 프로퍼티다.</p>
+      <pre><code class="language-css"><!--
+      flex-flow: flex-direction flex-wrap
+      --></code></pre>
+      <p>flex-direction과 flex-wrap을 한 번에 설정하며, 각 프로퍼티는 공백으로 구분한다.</p>
+      <p>둘 중 하나만 써도 어차피 키워드가 다르기 때문에 알아서 인식한다.</p>
+      <p>Flexbox 컨테이너에 지정하며, 기본값은 row nowrap이다.</p>
     </section>
 
     <section>

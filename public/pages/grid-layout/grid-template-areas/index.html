@@ -24,11 +24,11 @@
 
     <section>
       <h2>개요</h2>
-      <p>grid-template-areas는 Grid Area에 이름을 부여하고, 2차원 그리드 판을 눈으로 그려보듯 직관적으로 배치할 수 있게 해주는 속성이다.</p>
-      <p>이 프로퍼티를 사용하면 줄(Grid Line) 번호를 계산할 필요 없이, 시각적으로 레이아웃 구조를 설정할 수 있어서 매우 편리하다.</p>
-      <p>Grid 컨테이너에 직접 지정하며, 기본값은 none이다.</p>
+      <p>grid-template-areas는 grid area에 이름을 부여하고, 2차원 그리드 판을 눈으로 그려보듯 직관적으로 배치할 수 있게 해주는 속성이다.</p>
+      <p>이 프로퍼티를 사용하면 줄(grid line) 번호를 계산할 필요 없이, 시각적으로 레이아웃 구조를 설정할 수 있어서 매우 편리하다.</p>
+      <p>그리드 컨테이너에 지정하며, 기본값은 none이다.</p>
       <div class="important">
-        <p>ℹ️ Grid Area는 여러 Grid Cell로 구성된 영역이다.</p>
+        <p>ℹ️ grid area는 여러 grid cell로 구성된 영역이다.</p>
       </div>
     </section>
 
@@ -55,7 +55,7 @@
 
     <section>
       <h2>Values</h2>
-      <p>문자열로 Grid Area의 이름을 지정한다. 이름으로 쓰일 값을 토큰이라 하는 모양. <code class="language-css">.</code> 토큰은 이름 없는 빈 Grid Cell을 의미한다.</p>
+      <p>문자열로 grid area의 이름을 지정한다. 이름으로 쓰일 값을 토큰이라 하는 모양. <code class="language-css">.</code> 토큰은 이름 없는 빈 grid cell을 의미한다.</p>
 
       <div class="important">
         <p>⚠️ grid-area 없이 grid-template-areas만 단독으로 쓰면, 셀이 하나로 합쳐지지 않고 기본 규칙(Auto-placement)에 따라 아이템이 셀을 하나씩 차례대로 차지한다.</p>
@@ -128,7 +128,7 @@
         "header header header"
         "side main";
       --></code></pre>
-      <p>같은 이름으로 연결된 Grid Area는 반드시 직사각형이어야 하며, L자나 T자 형태처럼 끊어진 영역은 유효하지 않다.</p>
+      <p>같은 이름으로 연결된 grid area는 반드시 직사각형이어야 하며, L자나 T자 형태처럼 끊어진 영역은 유효하지 않다.</p>
       <pre><code class="language-css"><!--
       /*❌ 직사각형이 아님*/
       grid-template-areas:

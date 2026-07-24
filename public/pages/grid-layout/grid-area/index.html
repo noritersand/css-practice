@@ -24,9 +24,12 @@
 
     <section>
       <h2>개요</h2>
-      <p>grid-area는 Grid 컨테이너 내의 개별 아이템이 차지할 영역을 지정한다.</p>
-      <p>grid-row-start, grid-column-start, grid-row-end, grid-column-end를 한 번에 설정하는 단축 프로퍼티다.</p>
-      <p>Grid 아이템에 직접 지정한다. 기본값은 auto</p>
+      <p>grid-area는 그리드 컨테이너 내의 개별 아이템이 차지할 영역을 지정하는 단축 프로퍼티다.</p>
+      <pre><code class="language-css"><!--
+      grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end
+      --></code></pre>
+      <p>grid-row-start, grid-column-start, grid-row-end, grid-column-end를 한 번에 설정하며, 각 프로퍼티는 슬래시로 구분한다.</p>
+      <p>그리드 아이템에 직접 지정한다. 기본값은 auto</p>
 
     </section>
 
@@ -65,11 +68,34 @@
       <h2>Values</h2>
       <p>어쩌구</p>
 
+      <h3>auto</h3>
+      <p>일부만 auto로 지정하거나 모든 프로퍼티를 auto로 지정할 수 있다.</p>
+      <pre><code class="language-css"><!--
+      grid-area: auto / 3 / -1 / auto
+      --></code></pre>
+      <p>프로퍼티를 생략하면 auto로 설정되기 때문에 아래 넷은 동일하게 작동한다:</p>
+      <pre><code class="language-css"><!--
+      grid-area: auto
+      grid-area: auto / auto
+      grid-area: auto / auto / auto
+      grid-area: auto / auto / auto / auto
+      --></code></pre>
+      <p>grid-row-start, grid-column-start를 auto로 지정하면, 그리드 배치 알고리즘에 의해 알아서 빈 공간을 찾는다</p>
+      <p>grid-row-end, grid-column-end를 auto로 지정하면 딱 1개의 트랙만 차지한다. (span 1과 동일)</p>
+
       <h3>some-value</h3>
+      <div class="code-result">
+        <div class="container ex01">
+          <div class="item item-header">header</div>
+          <div class="item item-side">side</div>
+          <div class="item item-main">main</div>
+          <div class="item item-footer">footer</div>
+        </div>
+      </div>
 
-      <div class="code-result">코드 결과</div>
-
-      <div class="important">추가 설명</div>
+      <h3>some-value</h3>
+      <div class="code-result">
+      </div>
 
     </section>
   </article>
