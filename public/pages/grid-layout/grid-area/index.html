@@ -66,7 +66,6 @@
 
     <section>
       <h2>Values</h2>
-      <p>어쩌구</p>
 
       <h3>auto</h3>
       <p>일부만 auto로 지정하거나 모든 프로퍼티를 auto로 지정할 수 있다.</p>
@@ -83,7 +82,20 @@
       <p>grid-row-start, grid-column-start를 auto로 지정하면, 그리드 배치 알고리즘에 의해 알아서 빈 공간을 찾는다</p>
       <p>grid-row-end, grid-column-end를 auto로 지정하면 딱 1개의 트랙만 차지한다. (span 1과 동일)</p>
 
-      <h3>some-value</h3>
+      <h3>Custom-indent One Value</h3>
+      <p>가장 자주 쓰이는 방식으로 영역 이름이나 라인 이름을 지정한다. grid-row-start를 제외한 나머지는 auto로 설정된다.</p>
+      <pre><code class="language-css"><!--
+      grid-template: "header header" 1fr "side main" 2fr "footer footer" 1fr / 1fr 3fr
+
+      .item-header
+        grid-area: header
+      .item-side
+        grid-area: side
+      .item-main
+        grid-area: main
+      .item-footer
+        grid-area: footer
+      --></code></pre>
       <div class="code-result">
         <div class="container ex01">
           <div class="item item-header">header</div>
@@ -93,8 +105,77 @@
         </div>
       </div>
 
-      <h3>some-value</h3>
+      <h3>Custom-indent Two Value</h3>
+      <p>마찬가지로 영역 이름이나 라인 이름을 지정하는 방식인데, 프로퍼티 두 개를 생략한 것처럼 보이지만 사실은...</p>
+      <p>첫 번째 값이 grid-row-start와 grid-row-end로, 두 번째 값이 grid-column-start와 grid-column-end로 설정된다.</p>
+      <pre><code class="language-css"><!--
+      grid-template-areas: "header header" "sidebar main" "footer footer"
+      grid-template-rows: 1fr 2fr 1fr
+      grid-template-columns: 1fr 3fr
+
+      .item-custom
+        grid-area: sidebar / header
+        /* grid-area: sidebar / header / sidebar / header 와 동일 */
+      --></code></pre>
       <div class="code-result">
+        <div class="container ex02">
+          <!--          <div class="item item-header">header</div>-->
+          <!--          <div class="item item-main">main</div>-->
+          <div class="item item-custom">sidebar 행 + header 열 교차 영역</div>
+        </div>
+      </div>
+
+      <p>라인 이름을 지정한 방식이면 이렇게 된다</p>
+      <pre><code class="language-css"><!--
+      grid-template-rows: [header-start] 1fr [header-end main-start] 2fr [main-end]
+      grid-template-columns: [full-start] 1fr [main-start] 3fr [full-end main-end]
+
+      .item-header
+        grid-area: header-start / full-start
+        /* grid-area: header-start / full-start / header-start / full-start 와 동일 */
+
+      .item-main
+        grid-area: main-start / main-start
+        /* grid-area: main-start / main-start / main-start / main-start 와 동일 */
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex03">
+          <div class="item item-header">header</div>
+          <div class="item item-main">main</div>
+        </div>
+      </div>
+      <img src="/images/custom-indent-two-value-line-names.png" />
+
+      <h3>Integer & Custom-ident Values</h3>
+      <pre><code class="language-css"><!--
+      grid-template-rows: [item-line] 50px [item-line] 50px [item-line] 50px [item-line] 50px [item-line] 50px
+      grid-template-columns: 1fr
+
+      .item-target
+        /* 'item-line'이라는 이름을 가진 행 라인 중 4번째 라인에서 시작 */
+        grid-area: 4 item-line
+        /* grid-area: 4 item-line / auto / auto / auto 와 동일 */
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex04">
+          <div class="item item-target">4번째 item-line 행에서 시작하는 아이템</div>
+        </div>
+      </div>
+
+      <h3>Span & Custom Ident values</h3>
+      <pre><code class="language-css"><!--
+      grid-template-rows: repeat(5, 50px)
+      grid-template-columns: repeat(3, 1fr)
+
+      .item-span
+        /* 행 방향으로 3개 트랙만큼 영역을 차지함 */
+        grid-area: span 3
+        /* grid-area: span 3 / auto / auto / auto 와 동일 */
+      --></code></pre>
+      <div class="code-result">
+        <div class="container ex05">
+          <div class="item item-span">행 방향 3칸 차지하는 아이템</div>
+        </div>
       </div>
 
     </section>
